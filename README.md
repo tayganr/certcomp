@@ -14,6 +14,16 @@
 
 ## Architecture
 
+![](media/architecture.png)
+
+## Technologies
+
+* Azure Functions on Linux
+* Azure Blob Storage
+* Azure Data Factory
+* Power BI
+* Application Insights
+
 ## Feedback
 
 *  Reach me on Twitter [@tayganr](https://twitter.com/tayganr)
