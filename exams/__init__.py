@@ -42,7 +42,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         published = None
         if 'release' in exam_title:
-            published = exam_title.split('(')[1].split(')')[0].replace('releases ','').replace('released ','')
+            published = exam_title.replace('(beta)','')
+            published = published.split('(')[1].split(')')[0].replace('releases ','').replace('released ','')
             exam_title = exam_title.split(' (')[0]
 
         exam_title = exam_title.strip()
