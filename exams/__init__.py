@@ -36,12 +36,12 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     
     for li in tree.xpath('//*[@id="exam-list-wrap"]/div/ul/li'):
         # EXAM
-        exam = li.xpath('./a[@class="mscom-link"]')
+        exam = li.xpath('./a[@class="mscom-link"]')[0]
         link_text = exam.xpath('./text()')[0]
         exam_id = link_text.split(':')[0]
         exam_title = link_text.split(':')[1]
         exam_url = exam.attrib['href']
-        beta = extract(li.xpath('./strong/text()'))
+        beta = bool(extract(li.xpath('./strong/text()')))
 
         published = None
         if 'release' in exam_title:
@@ -56,7 +56,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # DETAIL
         try:
             detail = requests.get(exam_url, timeout=5)
-            logging.info(detail.status_code)
             detail_tree = html.fromstring(detail.content)
 
             if published is None:
@@ -90,6 +89,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         response[exam_id]['title'] = exam_title
         response[exam_id]['url'] = exam_url
         response[exam_id]['published'] = published
+        response[exam_id]['beta'] = beta
         data_exam.append(exam_row)
 
     # 4. Write to Azure Blob Storage
