@@ -16,7 +16,7 @@ CONTAINER_NAME = os.environ.get('CERT_COMP_STORAGE_CONTAINER')
 # Output Files
 FILE_NAME_EXAMS = 'exams'
 FILE_NAME_PREP = 'preparation'
-COLUMNS_EXAMS = ['EXAM_ID', 'EXAM', 'LINK', 'PUBLISHED']
+COLUMNS_EXAMS = ['EXAM_ID', 'EXAM', 'LINK', 'PUBLISHED', 'BETA']
 COLUMNS_PREP = ['EXAM_ID', 'PREP_TYPE', 'PREP_TEXT', 'LINK']
 
 # Microsoft Exams
@@ -33,12 +33,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     tree = html.fromstring(page.content)
 
     # 3. Get Data
-    for exam in tree.xpath('//a[@class="mscom-link"]'):
+    
+    for li in tree.xpath('//*[@id="exam-list-wrap"]/div/ul/li'):
         # EXAM
+        exam = li.xpath('./a[@class="mscom-link"]')
         link_text = exam.xpath('./text()')[0]
         exam_id = link_text.split(':')[0]
         exam_title = link_text.split(':')[1]
         exam_url = exam.attrib['href']
+        beta = extract(li.xpath('./strong/text()'))
 
         published = None
         if 'release' in exam_title:
@@ -82,7 +85,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             logging.exception("Timeout occurred")
 
         # ROW - EXAM
-        exam_row = [exam_id, exam_title, exam_url, published]
+        exam_row = [exam_id, exam_title, exam_url, published, beta]
         response[exam_id] = {}
         response[exam_id]['title'] = exam_title
         response[exam_id]['url'] = exam_url
