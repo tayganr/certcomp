@@ -20,8 +20,7 @@ COLUMNS_CERTS = ['CERT_ID', 'LEVEL', 'CERTIFICATION', 'LINK', 'REQUIREMENTS']
 COLUMNS_CERTEXAMS = ['CERT_ID', 'EXAM_ID']
 
 # Microsoft Certifications
-URL_CERTS_NEW = 'https://www.microsoft.com/en-us/learning/browse-new-certification.aspx'
-URL_CERTS_LEGACY = 'https://www.microsoft.com/learning/proxy2/LocAPIPROD/api/values/GetContent?localeCode=en-us&property=certificationCards'
+URL_CERTS = 'https://www.microsoft.com/learning/proxy2/LocAPIPROD/api/values/GetContent?localeCode=en-us&property=mslCertifications'
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
@@ -31,75 +30,50 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     response = {}
     response['certifications'] = {}
 
-    # 2. LEGACY CERTIFICATIONS ##################################################
-    http_response = requests.get(URL_CERTS_LEGACY)
+    # CERTIFICATIONS ##################################################
+    http_response = requests.get(URL_CERTS)
     http_data = json.loads(http_response.content)
 
-    for level in http_data['certificationCards']:
+    for level in http_data['mslCertifications']:
         response['certifications'][level] = {}
-        for cert in http_data['certificationCards'][level]:
+        for cert in http_data['mslCertifications'][level]:
             # Certification Name and URL
+            cert_id = cert['ID']
             cert_title = cert['name']
             cert_url = 'https://www.microsoft.com/en-us/learning/{0}'.format(cert['url'])
-            cert_id = getCertId(cert_url)
             logging.info(cert_title)
 
-            if(cert_id):
-                # Certification Details
-                cert_api = 'https://www.microsoft.com/learning/proxy2/LocAPIPROD/api/values/GetContent?localeCode=en-us&property={0}'.format(cert_id)
+            cert_response = requests.get(cert_url)
+            cert_tree = html.fromstring(cert_response.content)
+            
+            if(level == 'Role-based'):
+                requirement = 'Required Exams:'
+                for exam in cert_tree.xpath('//*[@id="msl-certification-azure"]/div[1]/section/div/div/p[1]/a'):
+                    exam_id = exam.xpath('./text()')[0].replace('Exam ','').replace('Transition ','').strip()
+                    requirement += ' {0};'.format(exam_id)
+                    cert_row = [cert_id, level, cert_title, cert_url, requirement]
+                    data_certs.append(cert_row)
+                    response['certifications'][level][cert_title] = []
+                    exam_row = [cert_id, exam_id]
+                    data_certexams.append(exam_row)
+                    response['certifications'][level][cert_title].append(exam_id)
+            elif(level != 'MCE'):
+                script_text = cert_tree.xpath('//*[@id="content"]/div/div/script/text()')[0]
+                api_key = script_text.split('fnLoadCertificationPage')[1].split('"')[1]
+                cert_api = 'https://www.microsoft.com/learning/proxy2/LocAPIPROD/api/values/GetContent?localeCode=en-us&property={0}'.format(api_key)
                 cert_response = requests.get(cert_api)
                 cert_data = json.loads(cert_response.content)
-                requirement = getRequirement(cert_data[cert_id], level)
-
+                requirement = getRequirement(cert_data[api_key], level)
                 cert_row = [cert_id, level, cert_title, cert_url, requirement]
                 data_certs.append(cert_row)
                 response['certifications'][level][cert_title] = []
 
                 # Exam - Certification 
-                for exam in cert_data[cert_id]['cert_page_details']['steps']['step2']['exams']:
+                for exam in cert_data[api_key]['cert_page_details']['steps']['step2']['exams']:
                     exam_id = exam['exam_code'].replace('Exam ', '')
                     exam_row = [cert_id, exam_id]
                     data_certexams.append(exam_row)
                     response['certifications'][level][cert_title].append(exam_id)
-
-    # 3. ROLE BASED CERTIFICATIONS ##################################################
-    http_response2 = requests.get(URL_CERTS_NEW)
-    tree2 = html.fromstring(http_response2.content)
-
-    for card2 in tree2.xpath('//section[@class="msl-certification-card"]'):
-        role_based_cert_title = card2.xpath('./div/h3/text()')
-        if len(role_based_cert_title) > 0:
-            role_based_cert_title = role_based_cert_title[0]
-            role_based_cert_link = 'https://www.microsoft.com/en-us/learning/' + card2.xpath('.//a')[0].attrib["href"]
-            role_based_cert_id = transformCertId(role_based_cert_link)
-
-            role_based_cert_level = None
-            role_based_cert_img = card2.xpath('.//picture/img/@src')[0]
-
-            if 'associate' in role_based_cert_img:
-                role_based_cert_level = 'Associate'
-            elif 'expert' in role_based_cert_img:
-                role_based_cert_level = 'Expert'
-            else:
-                role_based_cert_level = 'Fundamentals'
-
-            logging.info(role_based_cert_title)
-
-            rbc_page = requests.get(role_based_cert_link)
-            rbc_tree = html.fromstring(rbc_page.content)
-
-            role_based_cert_reqs = 'Pass the following exam(s):'
-            for link in rbc_tree.xpath('//a[@class="msl-body-regular msl-cp-hyperlink"]'):
-                if len(link.xpath('./text()')):
-                    link_text = link.xpath('./text()')[0]
-                    exam_text = link_text.replace('Schedule to take Exam ','')
-                    if len(exam_text) < len(link_text):
-                        role_based_cert_reqs += ' {0};'.format(exam_text)
-                        rbc_exam_row = [role_based_cert_id, exam_text]
-                        data_certexams.append(rbc_exam_row)
-            
-            rbc_cert_row = [role_based_cert_id, role_based_cert_level, role_based_cert_title, role_based_cert_link, role_based_cert_reqs]
-            data_certs.append(rbc_cert_row)
         
     # 4. Write to Azure Blob Storage
     block_blob_service = BlockBlobService(account_name=ACCOUNT_NAME, account_key=ACCOUNT_KEY)     
