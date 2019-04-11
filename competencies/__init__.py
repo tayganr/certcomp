@@ -23,7 +23,7 @@ COLUMNS_COMPEXAMS = ['COMPETENCY','OPTION','LEVEL','EXAM']
 URL = 'https://partner.microsoft.com/en-us/membership/competencies'
 XPATH_COMPETENCY_AREAS = '//div[@class="panel-group hidden-md-x hidden-lg simple-tabs-accordion-sm"]/div'
 XPATH_COMPETENCIES = './div//div[@class="accordion-container"]//div[@class="panel-group"]/div'
-COMPETENCY_URL_PREFIX = 'https://partner.microsoft.com'
+# COMPETENCY_URL_PREFIX = 'https://partner.microsoft.com'
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
@@ -44,7 +44,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
         for comp in area.xpath(XPATH_COMPETENCIES):
             competency = comp.xpath('.//span[@class="accordion-heading-text"]/text()')[0]
-            competency_link = COMPETENCY_URL_PREFIX + comp.xpath('.//a[@class="button cta-x cta-x-primary bg-blue"]')[0].attrib["href"]
+            competency_link = comp.xpath('.//a[@class="button cta-x cta-x-primary bg-blue"]')[0].attrib["href"]
+            logging.info(competency_link)
             row = [competency_area, competency, competency_link]
             data_comps.append(row)
             response['competencies'][competency_area].append({"competency":competency,"link":competency_link})
