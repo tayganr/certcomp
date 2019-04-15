@@ -48,15 +48,18 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             
             if(level == 'Role-based'):
                 requirement = 'Required Exams:'
+                response['certifications'][level][cert_title] = []
                 for exam in cert_tree.xpath('//*[@id="msl-certification-azure"]/div[1]/section/div/div/p[1]/a'):
                     exam_id = exam.xpath('./text()')[0].replace('Exam ','').replace('Transition ','').strip()
                     requirement += ' {0};'.format(exam_id)
-                    cert_row = [cert_id, level, cert_title, cert_url, requirement]
-                    data_certs.append(cert_row)
-                    response['certifications'][level][cert_title] = []
                     exam_row = [cert_id, exam_id]
                     data_certexams.append(exam_row)
                     response['certifications'][level][cert_title].append(exam_id)
+                
+                logging.info(requirement)
+                
+                cert_row = [cert_id, level, cert_title, cert_url, requirement]
+                data_certs.append(cert_row)
             elif(level != 'MCE'):
                 script_text = cert_tree.xpath('//*[@id="content"]/div/div/script/text()')[0]
                 api_key = script_text.split('fnLoadCertificationPage')[1].split('"')[1]
