@@ -1,0 +1,423 @@
+﻿EXAM_ID,PREP_TYPE,PREP_TEXT,LINK
+PLACEHOLDER,learning path,Work with accounts receivable in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/work-accounts-receivable-d365-finance-ops
+PLACEHOLDER,learning path,"Configure and use cash and bank management, and sales tax in Dynamics 365 for Finance and Operations",https://docs.microsoft.com/en-us/learn/paths/configure-use-cash-bank-management-tax-d365-finance-ops
+PLACEHOLDER,learning path,Migrate data and go live with Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/migrate-data-go-live-with-dynamics-365-finance-ops
+PLACEHOLDER,module,Translate speech in real time with Azure Cognitive Services,https://docs.microsoft.com/en-us/learn/modules/convert-speech-to-text
+PLACEHOLDER,module,Recognize specific voices with the Speaker Recognition APIs in Azure Cognitive Services,https://docs.microsoft.com/en-us/learn/modules/recognize-voices-with-speaker-recognition
+PLACEHOLDER,module,Overview of the Microsoft Cloud Operating Model,https://docs.microsoft.com/en-us/learn/modules/cloud-operating-model
+PLACEHOLDER,module,Create an Azure account,https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account
+PLACEHOLDER,module,Classify and moderate text with Azure Content Moderator,https://docs.microsoft.com/en-us/learn/modules/classify-and-moderate-text-with-azure-content-moderator
+PLACEHOLDER,module,Add conversational intelligence to your apps by using Language Understanding Intelligent Service (LUIS),https://docs.microsoft.com/en-us/learn/modules/create-and-publish-a-luis-model
+PLACEHOLDER,module,Identify faces and expressions by using the Computer Vision API in Azure Cognitive Services,https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision
+PLACEHOLDER,module,Core Cloud Services - Introduction to Azure,https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure
+PLACEHOLDER,module,Build an FAQ chatbot with QnA Maker and Azure Bot Service,https://docs.microsoft.com/en-us/learn/modules/build-a-faq-chat-bot-with-qna-maker-and-azure-bot-service
+PLACEHOLDER,module,Enhance your service availability and data locality using Azure Traffic Manager,https://docs.microsoft.com/en-us/learn/modules/distribute-load-with-traffic-manager
+PLACEHOLDER,module,Configure and manage the order to cash process in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-manage-order-to-cash
+PLACEHOLDER,module,Secure your Azure resources with conditional access,https://docs.microsoft.com/en-us/learn/modules/secure-azure-resources-with-conditional-access
+PLACEHOLDER,learning path,Configure and use budgeting in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/configure-use-budgeting-d365-finance-ops
+PLACEHOLDER,learning path,Configure and manage fixed assets in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/configure-manage-fixed-assets-d365-finance-ops
+PLACEHOLDER,module,Access Metrics from your Azure Blob Storage Containers Programmatically,https://docs.microsoft.com/en-us/learn/modules/access-blob-storage-metrics-from-code
+PLACEHOLDER,module,Configure process manufacturing in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-process-manufacturing-in-dynamics-365-finance-ops
+PLACEHOLDER,learning path,Use advanced data options and connectors in PowerApps,https://docs.microsoft.com/en-us/learn/paths/advanced-data-options-and-connectors
+PLACEHOLDER,module,Work with relational data in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/work-with-relational-data-powerapps-canvas-app
+PLACEHOLDER,module,Use custom connectors in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/use-custom-connectors-in-powerapps-canvas-app
+PLACEHOLDER,learning path,Getting Started with Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/paths/get-started-with-marketing
+PLACEHOLDER,module,Work with data source limits (delegation limits) in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/work-with-data-source-limits-powerapps-canvas-app
+PLACEHOLDER,module,Set up and manage Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/modules/get-started-set-up-and-manage
+PLACEHOLDER,module,Connecting to other data in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/connect-to-other-data-in-powerapps-canvas-app
+PLACEHOLDER,module,Advanced configuration for Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/modules/get-started-advanced-configuration
+PLACEHOLDER,learning path,Get started with Dynamics 365 Portals,https://docs.microsoft.com/en-us/learn/paths/get-started-dynamics-365-portals
+PLACEHOLDER,module,Call an API from a Logic Apps workflow using a custom connector,https://docs.microsoft.com/en-us/learn/modules/logic-apps-and-custom-connectors
+PLACEHOLDER,module,Scale an App Service web app to efficiently meet demand with App Service scale up and scale out,https://docs.microsoft.com/en-us/learn/modules/app-service-scale-up-scale-out
+PLACEHOLDER,learning path,Administer containers in Azure,https://docs.microsoft.com/en-us/learn/paths/administer-containers-in-azure
+PLACEHOLDER,module,Optimize storage performance and costs using Blob storage tiers,https://docs.microsoft.com/en-us/learn/modules/optimize-archive-costs-blob-storage
+PLACEHOLDER,module,Classify images with the Microsoft Custom Vision Service,https://docs.microsoft.com/en-us/learn/modules/classify-images-with-custom-vision-service
+PLACEHOLDER,module,Choose the appropriate Azure service to integrate and automate business processes,https://docs.microsoft.com/en-us/learn/modules/choose-azure-service-to-integrate-and-automate-business-processes
+PLACEHOLDER,module,Dynamically meet changing web app performance requirements with autoscale rules,https://docs.microsoft.com/en-us/learn/modules/app-service-autoscale-rules
+PLACEHOLDER,module,Handle transient errors in your app,https://docs.microsoft.com/en-us/learn/modules/handle-transient-errors-in-your-app
+PLACEHOLDER,module,Get started with lean manufacturing in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-started-with-lean-manufacturing
+PLACEHOLDER,module,Support concurrency in Blob storage apps with ETags and blob leases,https://docs.microsoft.com/en-us/learn/modules/support-concurrency-blob-storage
+PLACEHOLDER,module,Modern Communications in Microsoft Teams,https://docs.microsoft.com/en-us/learn/wwl-mba/modern-communications-in-microsoft-teams
+PLACEHOLDER,module,Configure and use master planning in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-use-master-planning-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Perform user acceptance testing (UAT) in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/perform-uat-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure discrete manufacturing in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-discrete-manufacturing-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Build a containerized web application with Docker,https://docs.microsoft.com/en-us/learn/modules/intro-to-containers
+PLACEHOLDER,module,Security with Microsoft 365,https://docs.microsoft.com/en-us/learn/wwl-mba/security-with-microsoft-365
+PLACEHOLDER,module,Introducing Microsoft 365 and Surface for Business,https://docs.microsoft.com/en-us/learn/wwl-mba/introducing-microsoft-365-and-surface-for-business
+PLACEHOLDER,module,Deploy and manage Windows 10 and Office 365 ProPlus,https://docs.microsoft.com/en-us/learn/wwl-mba/deploy-and-manage-windows-10-and-office-365-proplus
+PLACEHOLDER,module,Welcome to Microsoft 365,https://docs.microsoft.com/en-us/learn/wwl-mba/welcome-to-microsoft-365
+PLACEHOLDER,module,Compliance with Microsoft 365,https://docs.microsoft.com/en-us/learn/wwl-mba/compliance-with-microsoft-365
+PLACEHOLDER,module,Get more from Microsoft 365 with Surface for Business,https://docs.microsoft.com/en-us/learn/wwl-mba/get-more-from-microsoft-365-with-surface-for-business
+PLACEHOLDER,module,Get started with Microsoft 365 using FastTrack,https://docs.microsoft.com/en-us/learn/wwl-mba/get-started-with-microsoft-365-using-fasttrack
+PLACEHOLDER,module,Facilitate Teamwork with Microsoft 365,https://docs.microsoft.com/en-us/learn/wwl-mba/facilitate-teamwork-with-microsoft-365
+PLACEHOLDER,learning path,Modernize your workplace with Microsoft 365 and Surface for Business,https://docs.microsoft.com/en-us/learn/paths/modernize-workplace-with-m365-and-surface
+PLACEHOLDER,module,Develop web applications with Visual Studio Code,https://docs.microsoft.com/en-us/learn/modules/develop-web-apps-with-vs-code
+PLACEHOLDER,module,"Build a simple website using HTML, CSS, and Javascript",https://docs.microsoft.com/en-us/learn/modules/build-simple-website
+PLACEHOLDER,module,Create and process fixed Kanbans in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/create-process-fixed-kanbans
+PLACEHOLDER,module,Create and process event Kanban rules in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/create-process-event-kanban-rules
+PLACEHOLDER,module,Identify and configure batch attributes for process manufacturing in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/identify-configure-batch-attributes-for-process-manufacturing
+PLACEHOLDER,module,Distribute your services across Azure virtual networks and integrate them by using virtual network peering,https://docs.microsoft.com/en-us/learn/modules/integrate-vnets-with-vnet-peering
+PLACEHOLDER,module,Process purchase orders in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/process-purchase-orders-finance
+PLACEHOLDER,module,Work with manufacturing execution in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/work-with-manufacturing-execution
+PLACEHOLDER,module,Configure lean manufacturing in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-lean-manufacturing
+PLACEHOLDER,module,Configure and use budget planning in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-use-budget-planning
+PLACEHOLDER,module,Configure and use intercompany trade in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-use-intercompany-trade
+PLACEHOLDER,module,Get started with product configuration in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-started-product-configuration
+PLACEHOLDER,module,Create and process scheduled Kanbans in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/create-process-scheduled-kanbans
+PLACEHOLDER,module,Work with warehouse management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/work-with-warehouse-management
+PLACEHOLDER,module,Configure and perform the procure-to-purchase process in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-perform-procure-to-purchase-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Work with capacity planning and scheduling in discrete manufacturing in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/work-with-capacity-planning-scheduling-discrete-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure financial management for public sector in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-public-sector-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Introduction to Unified Operations Products - Dynamics 365 fundamentals,https://docs.microsoft.com/en-us/learn/modules/intro-unified-operations-fundamentals
+PLACEHOLDER,module,Perform accounts receivable daily procedures in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/accounts-receivable-daily-procedures-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Introduction to Customer Engagement Products - Dynamics 365 Fundamentals,https://docs.microsoft.com/en-us/learn/modules/intro-to-apps-ce-fundamentals
+PLACEHOLDER,module,How to build the UI in a canvas app in PowerApps,https://docs.microsoft.com/en-us/learn/modules/how-to-build-ui-canvas-app
+PLACEHOLDER,module,Introduction to the Power Platform - Dynamics 365 Fundamentals,https://docs.microsoft.com/en-us/learn/modules/power-plat-app-basic-fundamentals
+PLACEHOLDER,module,Use and understand Controls in a canvas app in PowerApps,https://docs.microsoft.com/en-us/learn/modules/controls-canvas-apps
+PLACEHOLDER,learning path,Dynamics 365 and Power Platform Fundamentals,https://docs.microsoft.com/en-us/learn/paths/dyn-power-plat-bus-app-fundamentals
+PLACEHOLDER,module,"Explore licensing, onboarding, and support Options - Dynamics 365 fundamentals",https://docs.microsoft.com/en-us/learn/modules/license-support-fundamentals
+PLACEHOLDER,module,Managing Deployments and Releases - Dynamics 365 Fundamentals,https://docs.microsoft.com/en-us/learn/modules/manage-deploy-release-fundamentals
+PLACEHOLDER,learning path,Use the UI and controls in a canvas app in PowerApps,https://docs.microsoft.com/en-us/learn/paths/ui-controls-canvas-app-powerapps
+PLACEHOLDER,module,Configure and use basic budgeting and budget control in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-use-basic-budgeting-budget-control-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Manage fixed assets in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/manage-fixed-assets-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Navigation in a canvas app in PowerApps,https://docs.microsoft.com/en-us/learn/modules/navigation-canvas-app
+PLACEHOLDER,module,Deploy and run a containerized web app with Azure App Service,https://docs.microsoft.com/en-us/learn/modules/deploy-run-container-app-service
+PLACEHOLDER,module,Configure accounts receivable in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-accounts-receivable-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Stage a web app deployment for testing and rollback by using App Service deployment slots,https://docs.microsoft.com/en-us/learn/modules/stage-deploy-app-service-deployment-slots
+PLACEHOLDER,module,Get started with discrete manufacturing in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-started-discrete-manufacturing-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Gather metrics from your Azure Blob Storage containers,https://docs.microsoft.com/en-us/learn/modules/gather-metrics-blob-storage
+PLACEHOLDER,module,Configure and use agreements in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-use-agreements-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Create products and product masters in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/create-products-product-masters-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure fixed assets management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-fixed-assets-mgmt-in-dynamics-365-finance-ops
+PLACEHOLDER,learning path,Configure and use the General ledger in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/configure-use-general-ledger-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure and work with transportation management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-work-with-transportation-management-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Capture Web Application Logs with App Service Diagnostics Logging,https://docs.microsoft.com/en-us/learn/modules/capture-application-logs-app-service
+PLACEHOLDER,module,Achieve business transformation with Microsoft Catalyst,https://docs.microsoft.com/en-us/learn/modules/achieve-business-transformation-with-microsoft-catalyst
+PLACEHOLDER,module,Process credit and collections in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/process-credit-collections-in-dynamics-365-finance-ops
+PLACEHOLDER,learning path,Use basic formulas to make better PowerApps canvas apps,https://docs.microsoft.com/en-us/learn/paths/use-basic-formulas-powerapps-canvas-app
+PLACEHOLDER,module,Configure warehouse management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-warehouse-management-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure and manage vendor collaboration in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-manage-vendor-collaboration-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Author a basic formula to change behaviors in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/author-basic-formula-change-behaviors-powerapps
+PLACEHOLDER,module,Author a basic formula to change properties in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/author-basic-formula-change-properties-powerapps
+PLACEHOLDER,module,Configure and work with quality control in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-work-with-quality-control-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Implement data binding in your Windows 10 application,https://docs.microsoft.com/en-us/learn/modules/implement-data-binding-in-windows-10-app
+PLACEHOLDER,module,Create a user interface (UI) for Windows 10 apps,https://docs.microsoft.com/en-us/learn/modules/create-ui-for-windows-10-apps
+PLACEHOLDER,module,Enhance the user interface of your Windows 10 app,https://docs.microsoft.com/en-us/learn/modules/enhance-ui-of-windows-10-app
+PLACEHOLDER,module,Move to a modern desktop with Microsoft 365,https://docs.microsoft.com/en-us/learn/modules/move-to-modern-desktop-m365
+PLACEHOLDER,module,Introduction to the Azure Data Science Virtual Machine,https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-dsvm
+PLACEHOLDER,module,Configure and work with inventory management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-inventory-management-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Introduction to Azure Machine Learning service,https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-machine-learning-service
+PLACEHOLDER,module,Select a cloud deployment model,https://docs.microsoft.com/en-us/learn/modules/select-a-cloud-deployment-model
+PLACEHOLDER,learning path,Microsoft 365 Fundamentals,https://docs.microsoft.com/en-us/learn/paths/m365-fundamentals
+PLACEHOLDER,module,Choose the Data Science service in Azure you need,https://docs.microsoft.com/en-us/learn/modules/choose-data-science-option-in-azure
+PLACEHOLDER,module,Manage your Microsoft 365 subscription,https://docs.microsoft.com/en-us/learn/modules/manage-your-m365-subscription
+PLACEHOLDER,module,What is Microsoft 365?,https://docs.microsoft.com/en-us/learn/modules/what-is-m365
+PLACEHOLDER,module,Introduction to Data Science in Azure,https://docs.microsoft.com/en-us/learn/modules/intro-to-data-science-in-azure
+PLACEHOLDER,module,Provision and use an Azure Data Science Virtual Machine,https://docs.microsoft.com/en-us/learn/modules/provision-and-use-azure-dsvm
+PLACEHOLDER,module,Introduction to Microsoft 365 core services and features,https://docs.microsoft.com/en-us/learn/modules/intro-to-m365-core-services
+PLACEHOLDER,module,Introduction to Microsoft 365 unified endpoint management,https://docs.microsoft.com/en-us/learn/modules/intro-to-m365-unified-endpoint-management
+PLACEHOLDER,module,Use inventory reports in Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/use-inventory-reports-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Automate the ML model selection with Azure Machine Learning service,https://docs.microsoft.com/en-us/learn/modules/automate-model-selection-with-azure-automl
+PLACEHOLDER,module,Explore the types of Azure Data Science Virtual Machines,https://docs.microsoft.com/en-us/learn/modules/explore-azure-dsvm-types
+PLACEHOLDER,module,Introduction to teamwork in Microsoft 365,https://docs.microsoft.com/en-us/learn/modules/intro-to-teamwork-in-m365
+PLACEHOLDER,module,Security in Microsoft 365,https://docs.microsoft.com/en-us/learn/modules/security-in-m365
+PLACEHOLDER,module,Get started with financial management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-started-financial-management-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Register and deploy ML models with Azure Machine Learning service,https://docs.microsoft.com/en-us/learn/modules/register-and-deploy-model-with-amls
+PLACEHOLDER,module,Train a local ML model with Azure Machine Learning service,https://docs.microsoft.com/en-us/learn/modules/train-local-model-with-azure-mls
+PLACEHOLDER,module,Get started with supply chain management in Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-started-supply-chain-management-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Compliance in Microsoft 365,https://docs.microsoft.com/en-us/learn/modules/compliance-in-m365
+PLACEHOLDER,module,Create bill of materials in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/create-bill-of-materials-in-dynamics-365-finance-ops
+PLACEHOLDER,learning path,Get started with Machine Learning with an Azure Data Science Virtual Machine,https://docs.microsoft.com/en-us/learn/paths/get-started-with-azure-dsvm
+PLACEHOLDER,module,Work with external data in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/work-with-external-data
+PLACEHOLDER,learning path,Explore AI solution development with data science services in Azure,https://docs.microsoft.com/en-us/learn/paths/explore-data-science-tools-in-azure
+PLACEHOLDER,learning path,Introduction to machine learning with Python and Azure Notebooks,https://docs.microsoft.com/en-us/learn/paths/intro-to-ml-with-python
+PLACEHOLDER,learning path,Build AI solutions with Azure Machine Learning service,https://docs.microsoft.com/en-us/learn/paths/build-ai-solutions-with-azure-ml-service
+PLACEHOLDER,module,Write data in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/write-data
+PLACEHOLDER,module,Shape data in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/shape-data
+PLACEHOLDER,module,Author a basic formula that uses tables and records in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/modules/author-basic-formula-tables-records-powerapps
+PLACEHOLDER,learning path,Work with data in a PowerApps canvas app,https://docs.microsoft.com/en-us/learn/paths/work-with-data-in-a-canvas-app
+PLACEHOLDER,learning path,Configure your organization in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/configure-your-organization-in-finance-and-ops
+PLACEHOLDER,module,Get started with cost accounting in Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-started-with-cost-accounting-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Secure Common Data Service data in Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/modules/secure-common-data-service-data-dynamics-365
+PLACEHOLDER,module,Implement common integration features in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/implement-common-integration-features-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure credit and collections in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-credit-and-collections-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Develop with Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/modules/develop-with-dynamics-365-portals
+PLACEHOLDER,module,Creating Adaptive Cards,https://docs.microsoft.com/en-us/learn/modules/writing-adaptive-cards
+PLACEHOLDER,module,Dynamics 365 applications and Power Platform,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-apps-power-platform
+PLACEHOLDER,module,Work with analytics and reporting in Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/work-with-analytics-reporting-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Work with data management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/work-with-data-management-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure letters of credit and guarantees in Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-letters-of-credit-guarantees-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure and process postdated checks in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-and-process-postdated-checks-in-dynamics-365-finance-ops
+PLACEHOLDER,learning path,Work with accounts payable in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/work-with-accounts-payable-in-dynamics-365-for-finance-and-ops
+PLACEHOLDER,module,Work with workflows in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/create-use-workflows-in-dynamics-365-finance-ops
+PLACEHOLDER,learning path,Extend Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/paths/extend-dynamics-365-portals
+PLACEHOLDER,module,Design and build mobile apps for Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/design-and-build-mobile-apps-for-dynamics-365-finance-ops
+PLACEHOLDER,module,Prepare data for migration to Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/prepare-data-migration-to-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure the Tax module in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-tax-module-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Get started with production control in Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-started-with-production-control-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Authenticate browser-based apps with Azure App Services,https://docs.microsoft.com/en-us/learn/modules/authenticate-browser-based-apps-with-azure-app-services
+PLACEHOLDER,learning path,Work with Dynamics 365 for Sales Professional,https://docs.microsoft.com/en-us/learn/paths/working-with-dynamics-sales-professional
+PLACEHOLDER,module,Create content in Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/modules/create-content-dynamics-365-portals
+PLACEHOLDER,module,Manage users and authentication in Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/modules/manage-users-auth-dynamics-365-portals
+PLACEHOLDER,module,Work with Dynamics 365 portal components,https://docs.microsoft.com/en-us/learn/modules/work-with-dynamics-365-portal-components
+PLACEHOLDER,module,Configure cash and bank management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-cash-and-bank-management-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Get started with Windows Subsystem for Linux,https://docs.microsoft.com/en-us/learn/modules/get-started-with-windows-subsystem-for-linux
+PLACEHOLDER,module,Secure Dynamics 365 portals content,https://docs.microsoft.com/en-us/learn/modules/secure-dynamics-365-portal-content
+PLACEHOLDER,module,Intercompany accounting in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/intercompany-accounting-in-dynamics-365-finance-ops
+PLACEHOLDER,learning path,Work with portals in Dynamics 365,https://docs.microsoft.com/en-us/learn/paths/work-with-portals-in-dynamics-365
+PLACEHOLDER,module,Perform Accounts payable daily procedures in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/accounts-payable-daily-procedures-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Configure ledger allocations and accruals in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-ledger-allocations-accruals-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Work with cash and bank management in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/work-with-cash-and-bank-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Prepare to go-live with Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/prepare-go-live-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Plan and configure the global address book (GAB) in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/plan-config-global-address-book-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Access Common Data Service data in Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/modules/access-common-data-service-dynamics-365
+PLACEHOLDER,module,Get started with Lifecycle Services for Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-started-with-lcs
+PLACEHOLDER,module,Integrate adaptive cards into Windows 10 Timeline,https://docs.microsoft.com/en-us/learn/modules/integrate-app-into-windows-10-timeline
+PLACEHOLDER,module,Introduction to Windows 10 development,https://docs.microsoft.com/en-us/learn/modules/introduction-to-windows10-dev
+PLACEHOLDER,module,Configure Accounts payable in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-accounts-payable-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Perform general ledger daily procedures in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/general-ledger-daily-procedures-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Plan and implement legal entities in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/plan-implement-legal-entities-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Optimize performance of Azure Cosmos DB by using partitioning and indexing strategies,https://docs.microsoft.com/en-us/learn/modules/monitor-and-scale-cosmos-db
+PLACEHOLDER,learning path,Use Lifecycle Services (LCS) to design and plan an implementation of Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/use-lcs-to-design-and-plan-an-implementation-of-f-and-o
+PLACEHOLDER,module,"Work with accounting distributions, invoice validations and settlements in Dynamics 365 for Finance and Operations",https://docs.microsoft.com/en-us/learn/modules/accounting-distributions-invoice-validations-settlements-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Design and plan an implementation of Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/design-plan-implementation-in-f-and-o
+PLACEHOLDER,module,Instrument server-side web application code with Application Insights,https://docs.microsoft.com/en-us/learn/modules/instrument-web-app-code-with-application-insights
+PLACEHOLDER,module,Configure chart of accounts in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-chart-of-accounts-in-dynamics-365-finance-ops
+PLACEHOLDER,learning path,Process and classify images with the Azure Cognitive Vision Services,https://docs.microsoft.com/en-us/learn/paths/classify-images-with-vision-services
+PLACEHOLDER,learning path,Create Intelligent Bots with the Azure Bot Service,https://docs.microsoft.com/en-us/learn/paths/create-bots-with-the-azure-bot-service
+PLACEHOLDER,learning path,Process and translate speech with Azure Cognitive Speech Services,https://docs.microsoft.com/en-us/learn/paths/translate-speech-with-speech-services
+PLACEHOLDER,learning path,Evaluate text with Azure Cognitive Language Services,https://docs.microsoft.com/en-us/learn/paths/evaluate-text-with-language-services
+PLACEHOLDER,learning path,Publish a Machine Learning Experiment with Microsoft Azure Machine Learning Studio,https://docs.microsoft.com/en-us/learn/paths/publish-experiment-with-ml-studio
+PLACEHOLDER,module,Predict flight delays by creating a machine learning model in Python,https://docs.microsoft.com/en-us/learn/modules/predict-flight-delays-with-python
+PLACEHOLDER,module,Analyze the sentiment of reviews with Keras,https://docs.microsoft.com/en-us/learn/modules/analyze-review-sentiment-with-keras
+PLACEHOLDER,learning path,Implementing Dynamics 365 Customer Engagement Online,https://docs.microsoft.com/en-us/learn/paths/implementing-customer-engagement-online
+PLACEHOLDER,module,Manage Dynamics 365 clients,https://docs.microsoft.com/en-us/learn/modules/manage-clients
+PLACEHOLDER,module,Microsoft Power Platform Mobile management,https://docs.microsoft.com/en-us/learn/modules/power-platform-mobile-management
+PLACEHOLDER,module,Configure ledgers and journals in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-ledgers-journals-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Design Microsoft Power Platform Dynamics 365 Deployments,https://docs.microsoft.com/en-us/learn/modules/designing-power-platform-deployments
+PLACEHOLDER,module,Configure currencies in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/configure-currencies-in-dynamics-365-finance-ops
+PLACEHOLDER,module,"Configure forms, charts, and dashboards in model driven apps for Customer Engagement",https://docs.microsoft.com/en-us/learn/modules/configure-model-driven-apps-customer-engagement
+PLACEHOLDER,module,"Create fiscal calendars, years, and periods in Dynamics 365 for Finance and Operations",https://docs.microsoft.com/en-us/learn/modules/create-fiscal-calendars-years-periods-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Access SQL Data Warehouse instances with Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/understand-the-sql-dw-connector-with-azure-databricks
+PLACEHOLDER,module,Perform basic data transformations in Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/perform-basic-data-transformation-in-azure-databricks
+PLACEHOLDER,module,Read and write data using Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/read-and-write-data-using-azure-databricks
+PLACEHOLDER,module,Perform advanced data transformation in Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/perform-advanced-data-transformation-in-azure-databricks
+PLACEHOLDER,module,Perform text analytics with Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/perform-text-analytics-with-azure-databricks
+PLACEHOLDER,module,Create data pipelines by using Databricks Delta,https://docs.microsoft.com/en-us/learn/modules/create-data-pipelines-using-databricks-delta
+PLACEHOLDER,module,Personalize Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/personalize-dynamics-365-finance-ops
+PLACEHOLDER,module,Data ingestion with Azure data factory,https://docs.microsoft.com/en-us/learn/modules/data-ingestion-with-azure-data-factory
+PLACEHOLDER,module,Create data visualizations by using Azure Databricks and Power BI,https://docs.microsoft.com/en-us/learn/modules/create-data-visualizations-using-azure-databricks-and-power-bi
+PLACEHOLDER,module,Work with streaming data in Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/streaming-in-azure-databricks
+PLACEHOLDER,module,Deep learning with Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/deep-learning-in-azure-databricks
+PLACEHOLDER,module,Introduction to Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-databricks
+PLACEHOLDER,learning path,Perform data engineering with Azure Databricks,https://docs.microsoft.com/en-us/learn/paths/data-engineering-with-databricks
+PLACEHOLDER,module,Set up batch jobs in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/setup-batch-jobs-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Plan and implement security in Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/plan-and-implement-security-in-dynamics-365-finance-ops
+PLACEHOLDER,module,Document and test your PowerApps application,https://docs.microsoft.com/en-us/learn/modules/document-test-powerapps-app
+PLACEHOLDER,module,Get help and learn more about Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/get-help-with-dynamics-365-finance-ops
+PLACEHOLDER,module,Navigate Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/navigate-dynamics-365-finance-ops
+PLACEHOLDER,module,Introduction to Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/introduction-to-dynamics-365-finance-ops
+PLACEHOLDER,module,Provision and administer Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/modules/provisioning-and-administering-portal
+PLACEHOLDER,module,Introduction to Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/modules/introduction-to-dynamics-365-portals
+PLACEHOLDER,module,Integrate Office and Dynamics 365 for Customer Engagement,https://docs.microsoft.com/en-us/learn/modules/integrating-office-and-dynamics-365-customer-engagement
+PLACEHOLDER,module,Introduction to integration with Dynamics 365 for Customer Engagement,https://docs.microsoft.com/en-us/learn/modules/introduction-to-integration-with-dynamics-365-customer-engagement
+PLACEHOLDER,module,Configure Dynamics 365 portals,https://docs.microsoft.com/en-us/learn/modules/configure-dynamics-365-portals
+PLACEHOLDER,module,Get started with workflows in Dynamics 365 for Customer Engagement,https://docs.microsoft.com/en-us/learn/modules/get-started-with-workflows-in-dynamics-365-for-customer-engagement
+PLACEHOLDER,module,Administer Microsoft Power Platform subscriptions,https://docs.microsoft.com/en-us/learn/modules/administrating-power-platform-subscriptions
+PLACEHOLDER,module,Define and track individual goals in Dynamics 365 Customer Engagement,https://docs.microsoft.com/en-us/learn/modules/define-track-goals-in-dynamics-365
+PLACEHOLDER,learning path,Apply goal management to Microsoft Dynamics 365 for Customer Engagement,https://docs.microsoft.com/en-us/learn/paths/apply-goal-management-dynamics-365
+PLACEHOLDER,module,Use goal metrics in Dynamics 365 Customer Engagement,https://docs.microsoft.com/en-us/learn/modules/use-goal-metrics-in-dynamics-365
+PLACEHOLDER,module,Manage your Dynamics 365 Customer Engagement data,https://docs.microsoft.com/en-us/learn/modules/manage-dynamics-365-data
+PLACEHOLDER,module,Create business process flows with Dynamics 365 Customer Engagement,https://docs.microsoft.com/en-us/learn/modules/work-with-business-process-flows-dynamics-365
+PLACEHOLDER,module,Build more complex flows with Microsoft Flow,https://docs.microsoft.com/en-us/learn/modules/build-more-flows
+PLACEHOLDER,module,Use the Admin center to manage environments and data policies in Microsoft Flow,https://docs.microsoft.com/en-us/learn/modules/administer-flows
+PLACEHOLDER,learning path,Automate a business process using Microsoft Flow,https://docs.microsoft.com/en-us/learn/paths/automate-process-using-flow
+PLACEHOLDER,module,Get started with Microsoft Flow,https://docs.microsoft.com/en-us/learn/modules/get-started-with-flow
+PLACEHOLDER,module,Manage and drive actions from survey responses with Voice of the Customer for Dynamics 365,https://docs.microsoft.com/en-us/learn/modules/voc-managing-driving-action-from-surveys
+PLACEHOLDER,module,Response routing and survey scoring options in Voice of the Customer for Dynamics 365,https://docs.microsoft.com/en-us/learn/modules/voc-response-routing-survey-scoring
+PLACEHOLDER,module,Create and design knowledge management solutions in Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/modules/creating-and-designing-knowledge-management-solutions
+PLACEHOLDER,learning path,Voice of the Customer for Dynamics 365,https://docs.microsoft.com/en-us/learn/paths/dyn365-voice-of-customer
+PLACEHOLDER,module,Create and manage entitlements in Microsoft Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/modules/creating-and-managing-entitlements-in-dynamics-365
+PLACEHOLDER,learning path,Work with cases in Microsoft Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/paths/work-with-cases-in-dynamics-365-for-customer-service
+PLACEHOLDER,module,Design Voice of the Customer for Dynamics 365 surveys,https://docs.microsoft.com/en-us/learn/modules/designing-voc-surveys
+PLACEHOLDER,learning path,Work with entitlements and service level agreements in Microsoft Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/paths/work-with-entitlements-and-slas-in-microsoft-dynamics-365-for-customer-service
+PLACEHOLDER,learning path,Work with Knowledge Management Solutions in Microsoft Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/paths/work-with-knowledge-management-solutions-in-microsoft-dynamics-365-for-customer-service
+PLACEHOLDER,module,Consuming Knowledge Articles for Case Resolutions in Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/modules/consuming-knowledge-articles-for-case-resolutions
+PLACEHOLDER,module,Work with and manage Service Level Agreements with Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-service-level-agreements
+PLACEHOLDER,module,Use Microsoft Dynamics 365 for Customer Service queues to manage case workloads,https://docs.microsoft.com/en-us/learn/modules/using-dynamics-365-queues-to-manage-case-workloads
+PLACEHOLDER,module,Managing cases with Microsoft Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/modules/managing-cases-with-dynamics-365
+PLACEHOLDER,module,Customize an app in PowerApps,https://docs.microsoft.com/en-us/learn/modules/customize-apps-in-powerapps
+PLACEHOLDER,module,Create and share your first Power BI report,https://docs.microsoft.com/en-us/learn/modules/build-your-first-power-bi-report
+PLACEHOLDER,module,Build a web API with ASP.NET Core,https://docs.microsoft.com/en-us/learn/modules/build-web-api-net-core
+PLACEHOLDER,module,"Schedule crews, facilities, and resource pooling in Microsoft Dynamics 365 for Field Service",https://docs.microsoft.com/en-us/learn/modules/schedule-resource-pools-crew-and-facilities-urs-dynamics-field-service
+PLACEHOLDER,module,Manage scheduling options in Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/modules/manage-scheduling-options-urs-dynamics-field-service
+PLACEHOLDER,module,Configure bookable resources in Microsoft Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/modules/configure-bookable-resources-urs-dynamics-field-service
+PLACEHOLDER,learning path,Create a canvas app in PowerApps,https://docs.microsoft.com/en-us/learn/paths/create-powerapps
+PLACEHOLDER,module,Get started building with Power BI,https://docs.microsoft.com/en-us/learn/modules/get-started-with-power-bi
+PLACEHOLDER,module,Remotely Monitor and Service Customer Equipment with Connected Field Service for Dynamics 365 and Azure IoT,https://docs.microsoft.com/en-us/learn/modules/remotely-monitor-and-service-customer-equipment
+PLACEHOLDER,module,Get started with model-driven apps in PowerApps,https://docs.microsoft.com/en-us/learn/modules/get-started-with-model-driven-apps-in-powerapps
+PLACEHOLDER,module,Get started with Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/modules/get-started-with-dynamics-365-for-customer-service
+PLACEHOLDER,module,Get started with PowerApps,https://docs.microsoft.com/en-us/learn/modules/get-started-with-powerapps
+PLACEHOLDER,module,Get started with Connected Field Service for Dynamics 365 and Azure IoT,https://docs.microsoft.com/en-us/learn/modules/get-started-with-connected-field-service
+PLACEHOLDER,learning path,Create and use analytics reports with Power BI,https://docs.microsoft.com/en-us/learn/paths/create-use-analytics-reports-power-bi
+PLACEHOLDER,module,Manage apps in PowerApps,https://docs.microsoft.com/en-us/learn/modules/manage-apps-in-powerapps
+PLACEHOLDER,module,Identify Exceptions with Connected Field Service for Dynamics 365 and Azure IoT,https://docs.microsoft.com/en-us/learn/modules/identify-exceptions-with-connected-field-service
+PLACEHOLDER,module,Using IoT Central with Connected Field Service for Dynamics 365,https://docs.microsoft.com/en-us/learn/modules/using-iot-central-with-connected-field-service
+PLACEHOLDER,module,Get started with the Common Data Service for Apps,https://docs.microsoft.com/en-us/learn/modules/get-started-with-powerapps-common-data-service
+PLACEHOLDER,module,Resource scheduling optimization in Microsoft Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/modules/schedule-resource-optimization-urs-dynamics-field-service
+PLACEHOLDER,learning path,Create a model-driven application in PowerApps,https://docs.microsoft.com/en-us/learn/paths/create-app-models-business-processes
+PLACEHOLDER,learning path,Working with Connected Field Service for Dynamics 365 and Azure IoT,https://docs.microsoft.com/en-us/learn/paths/working-with-connected-field-service-iot
+PLACEHOLDER,learning path,Universal Resource Scheduling in Microsoft Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/paths/universal-resource-scheduling
+PLACEHOLDER,module,Customize the schedule board in Microsoft Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/modules/customize-the-schedule-board-urs-dynamics-field-service
+PLACEHOLDER,module,Register and Manage Customer Devices with Connected Field Service for Dynamics 365 and Azure IoT,https://docs.microsoft.com/en-us/learn/modules/register-and-manage-customer-devices-with-connected-field-service
+PLACEHOLDER,module,Microsoft Azure IoT strategy and solutions,https://docs.microsoft.com/en-us/learn/modules/azure-iot-strategy-and-solutions
+PLACEHOLDER,module,Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-for-marketing
+PLACEHOLDER,module,Introduction to Microsoft Business Applications,https://docs.microsoft.com/en-us/learn/modules/intro-business-applications
+PLACEHOLDER,module,Manage relationships with social selling in Dynamics 365 for Sales,https://docs.microsoft.com/en-us/learn/modules/manage-relationships-social-selling-dynamics-365-sales
+PLACEHOLDER,module,Upload data to Azure Data Lake Storage,https://docs.microsoft.com/en-us/learn/modules/upload-data-to-azure-data-lake-storage
+PLACEHOLDER,module,Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-for-finance-ops
+PLACEHOLDER,module,Design a data warehouse with Azure SQL Data Warehouse,https://docs.microsoft.com/en-us/learn/modules/design-azure-sql-data-warehouse
+PLACEHOLDER,module,Work with data streams by using Azure Stream Analytics,https://docs.microsoft.com/en-us/learn/modules/introduction-to-data-streaming
+PLACEHOLDER,module,Analyze Dynamics 365 sales data,https://docs.microsoft.com/en-us/learn/modules/analyze-dynamics-365-sales-data
+PLACEHOLDER,module,Manage opportunities with Dynamics 365 for Sales,https://docs.microsoft.com/en-us/learn/modules/manage-opportunities-dynamics-365-sales
+PLACEHOLDER,module,Data warehouse security,https://docs.microsoft.com/en-us/learn/modules/data-warehouse-security
+PLACEHOLDER,module,Import data into Azure SQL Data Warehouse by using PolyBase,https://docs.microsoft.com/en-us/learn/modules/import-data-into-asdw-with-polybase
+PLACEHOLDER,module,Introduction to Azure Data Lake storage,https://docs.microsoft.com/en-us/learn/modules/introduction-to-azure-data-lake-storage
+PLACEHOLDER,module,"Power Platform—Introduction, business value, and demos",https://docs.microsoft.com/en-us/learn/modules/intro-to-power-platform-mba
+PLACEHOLDER,learning path,Learn the business value of Microsoft Dynamics 365 and the Power Platform,https://docs.microsoft.com/en-us/learn/paths/learn-business-value-of-dynamics-365-and-power-platform
+PLACEHOLDER,module,Microsoft Azure Artificial Intelligence (AI) strategy and solutions,https://docs.microsoft.com/en-us/learn/modules/azure-artificial-intelligence
+PLACEHOLDER,module,Dynamics 365 Business Central,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-business-central
+PLACEHOLDER,module,Understand the evolving world of data,https://docs.microsoft.com/en-us/learn/modules/evolving-world-of-data
+PLACEHOLDER,module,Enabling digital transformation,https://docs.microsoft.com/en-us/learn/modules/enable-digital-transformation
+PLACEHOLDER,module,Microsoft runs on trust,https://docs.microsoft.com/en-us/learn/modules/microsoft-runs-on-trust
+PLACEHOLDER,module,Manage and organize your product catalog with Dynamics 365 for Sales,https://docs.microsoft.com/en-us/learn/modules/manage-organize-product-catalog-dynamics-365-sales
+PLACEHOLDER,module,Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-for-field-service
+PLACEHOLDER,learning path,Learn the business value of Microsoft Azure,https://docs.microsoft.com/en-us/learn/paths/learn-business-value-of-azure
+PLACEHOLDER,module,Secure your Azure Storage account,https://docs.microsoft.com/en-us/learn/modules/secure-azure-storage-account
+PLACEHOLDER,learning path,Azure for the Data Engineer,https://docs.microsoft.com/en-us/learn/paths/azure-for-the-data-engineer
+PLACEHOLDER,module,Leverage Embedded Intelligence in Dynamics 365 for Sales,https://docs.microsoft.com/en-us/learn/modules/leverage-embedded-intelligence-dynamics-365-sales
+PLACEHOLDER,module,Dynamics 365 for Customer Service,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-for-customer-service
+PLACEHOLDER,module,Applications and infrastructure migration and modernization,https://docs.microsoft.com/en-us/learn/modules/app-and-infra-migration-and-modernization
+PLACEHOLDER,learning path,Implement a Data Warehouse with Azure SQL Data Warehouse,https://docs.microsoft.com/en-us/learn/paths/implement-sql-data-warehouse
+PLACEHOLDER,learning path,Large Scale Data Processing with Azure Data Lake Storage Gen2,https://docs.microsoft.com/en-us/learn/paths/data-processing-with-azure-adls
+PLACEHOLDER,module,Dynamics 365 for Sales,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-for-sales
+PLACEHOLDER,learning path,Extract knowledge and insights from your data with Azure Databricks,https://docs.microsoft.com/en-us/learn/paths/data-science
+PLACEHOLDER,module,Identify the tasks of a data engineer in a cloud-hosted architecture,https://docs.microsoft.com/en-us/learn/modules/data-engineering-processes
+PLACEHOLDER,module,Introduction to Azure solutions,https://docs.microsoft.com/en-us/learn/modules/intro-azure-areas-and-solutions
+PLACEHOLDER,module,Welcome to Microsoft Azure,https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure-generalist
+PLACEHOLDER,module,Microsoft data estate migration and modernization,https://docs.microsoft.com/en-us/learn/modules/data-estate-migration-and-modernization
+PLACEHOLDER,module,Query data in Azure SQL Data Warehouse,https://docs.microsoft.com/en-us/learn/modules/query-azure-sql-data-warehouse
+PLACEHOLDER,module,Transform data by using Azure Stream Analytics,https://docs.microsoft.com/en-us/learn/modules/transform-data-with-azure-stream-analytics
+PLACEHOLDER,module,Manage leads with Dynamics 365 for Sales,https://docs.microsoft.com/en-us/learn/modules/manage-leads-dynamics-365-sales
+PLACEHOLDER,module,Process sales orders with Dynamics 365 for Sales,https://docs.microsoft.com/en-us/learn/modules/process-sales-orders-dynamics-365-sales
+PLACEHOLDER,module,Survey the services on the Azure Data platform,https://docs.microsoft.com/en-us/learn/modules/survey-the-azure-data-platform
+PLACEHOLDER,learning path,Working with Dynamics 365 for Sales,https://docs.microsoft.com/en-us/learn/paths/working-with-dynamics-365-sales
+PLACEHOLDER,learning path,Get started with Dynamics 365 for Finance and Operations,https://docs.microsoft.com/en-us/learn/paths/get-started-with-dynamics-365-for-finance-and-ops
+PLACEHOLDER,learning path,Implement a Data Streaming Solution with Azure Streaming Analytics,https://docs.microsoft.com/en-us/learn/paths/implement-data-streaming-with-asa
+PLACEHOLDER,module,Dynamics 365 for Talent,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-for-talent
+PLACEHOLDER,module,Dynamics 365 for Retail,https://docs.microsoft.com/en-us/learn/modules/dynamics-365-for-retail
+PLACEHOLDER,module,Welcome to Microsoft Business Applications,https://docs.microsoft.com/en-us/learn/modules/welcome-to-business-app-generalist
+PLACEHOLDER,learning path,Implementing Microsoft Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/paths/implementing-dyn365-field-service
+PLACEHOLDER,module,Deliver a customized mobile experience in Microsoft Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/modules/implement-deliver-a-customized-mobile-experience
+PLACEHOLDER,module,Get started with Microsoft Dynamics 365 for Field Service Mobile,https://docs.microsoft.com/en-us/learn/modules/implement-get-started-with-microsoft-dynamics-365-for-field-service-mobile
+PLACEHOLDER,module,"Work order management, agreements, inventory, and purchasing in Microsoft Dynamics 365 for Field Service",https://docs.microsoft.com/en-us/learn/modules/implement-work-order-management-agreements-inventory-and-purchasing
+PLACEHOLDER,module,Configure Microsoft Dynamics 365 for Field Service,https://docs.microsoft.com/en-us/learn/modules/implement-configure-microsoft-dynamics-365-for-field-service
+PLACEHOLDER,module,Analyze Results in Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/modules/work-with-analyze-results
+PLACEHOLDER,module,Generate Leads in Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/modules/work-with-generate-leads
+PLACEHOLDER,module,Lead Lifecycle in Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/modules/work-with-lead-lifecycle
+PLACEHOLDER,module,Marketing to Leads and Contacts in Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/modules/work-with-marketing-to-leads-and-contacts
+PLACEHOLDER,learning path,Working with Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/paths/working-with-dynamics-365-for-marketing
+PLACEHOLDER,module,Assess Leads in Dynamics 365 for Marketing,https://docs.microsoft.com/en-us/learn/modules/work-with-assess-leads
+PLACEHOLDER,module,Tour the N-tier architecture style for your application,https://docs.microsoft.com/en-us/learn/modules/n-tier-architecture
+PLACEHOLDER,module,Load test Azure web apps by using Azure DevOps,https://docs.microsoft.com/en-us/learn/modules/load-test-web-app-azure-devops
+PLACEHOLDER,module,Capture and view page load times in your Azure web app with Application Insights,https://docs.microsoft.com/en-us/learn/modules/capture-page-load-times-application-insights
+PLACEHOLDER,module,Core Cloud Services - Azure architecture and service guarantees,https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure
+PLACEHOLDER,module,Predict costs and optimize spending for Azure,https://docs.microsoft.com/en-us/learn/modules/predict-costs-and-optimize-spending
+PLACEHOLDER,module,Apply and monitor infrastructure standards with Azure Policy,https://docs.microsoft.com/en-us/learn/modules/intro-to-governance
+PLACEHOLDER,learning path,Azure fundamentals,https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals
+PLACEHOLDER,module,Host a web application with Azure App service,https://docs.microsoft.com/en-us/learn/modules/host-a-web-app-with-azure-app-service
+PLACEHOLDER,module,Create an Experiment in Azure Machine Learning Studio,https://docs.microsoft.com/en-us/learn/modules/create-an-experiment-in-ml-studio
+PLACEHOLDER,module,Create an Azure Machine Learning Studio Account,https://docs.microsoft.com/en-us/learn/modules/create-machine-learning-studio-account
+PLACEHOLDER,module,Write internet-connected Windows apps,https://docs.microsoft.com/en-us/learn/modules/build-internet-connected-windows10-apps
+PLACEHOLDER,learning path,Develop Windows 10 applications,https://docs.microsoft.com/en-us/learn/paths/develop-windows10-apps
+PLACEHOLDER,module,Write your first Windows 10 application,https://docs.microsoft.com/en-us/learn/modules/write-your-first-windows10-app
+PLACEHOLDER,module,Keep your virtual machines updated,https://docs.microsoft.com/en-us/learn/modules/keep-your-virtual-machines-updated
+PLACEHOLDER,module,"Add a machine learning model to a UWP app, so it can run offline on a Windows device",https://docs.microsoft.com/en-us/learn/modules/add-machine-learning-to-uwp-app
+PLACEHOLDER,module,Getting started with Visual Studio for Windows 10 app development,https://docs.microsoft.com/en-us/learn/modules/get-started-with-visual-studio-for-windows10-app-dev
+PLACEHOLDER,module,Get started with Azure DevOps,https://docs.microsoft.com/en-us/learn/modules/get-started-with-devops
+PLACEHOLDER,module,Secure your Azure SQL Database,https://docs.microsoft.com/en-us/learn/modules/secure-your-azure-sql-database
+PLACEHOLDER,module,Perform exploratory data analysis with Azure Databricks,https://docs.microsoft.com/en-us/learn/modules/perform-exploratory-data-analysis-with-azure-databricks
+PLACEHOLDER,module,"Train, evaluate, and select machine-learning models with Azure Databricks",https://docs.microsoft.com/en-us/learn/modules/perform-model-training-evaluation-and-selection-with-azure-databricks
+PLACEHOLDER,module,The Mojifier - Create a Slack bot that replaces people's faces with emojis matching their emotion,https://docs.microsoft.com/en-us/learn/modules/replace-faces-with-emojis-matching-emotion
+PLACEHOLDER,module,Control and organize Azure resources with Azure Resource Manager,https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager
+PLACEHOLDER,module,Introduction to Azure Government,https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-government
+PLACEHOLDER,module,Secure your Azure resources with role-based access control (RBAC),https://docs.microsoft.com/en-us/learn/modules/secure-azure-resources-with-rbac
+PLACEHOLDER,module,Introduction to Site Reliability Engineering (SRE),https://docs.microsoft.com/en-us/learn/modules/intro-to-site-reliability-engineering
+PLACEHOLDER,module,Build a chat bot with the Azure Bot Service,https://docs.microsoft.com/en-us/learn/modules/build-chat-bot-with-azure-bot-service
+PLACEHOLDER,module,Caching and performance in Azure storage disks,https://docs.microsoft.com/en-us/learn/modules/caching-and-performance-azure-storage-and-disks
+PLACEHOLDER,module,Chain Azure functions together using input and output bindings,https://docs.microsoft.com/en-us/learn/modules/chain-azure-functions-data-using-bindings
+PLACEHOLDER,module,Monitor and manage your coffee machine with Azure IoT Central,https://docs.microsoft.com/en-us/learn/modules/monitor-and-manage-device-with-iot-central
+PLACEHOLDER,module,Provision an Azure SQL database to store application data,https://docs.microsoft.com/en-us/learn/modules/provision-azure-sql-db
+PLACEHOLDER,learning path,Secure your cloud data,https://docs.microsoft.com/en-us/learn/paths/secure-your-cloud-data
+PLACEHOLDER,module,Create serverless logic with Azure Functions,https://docs.microsoft.com/en-us/learn/modules/create-serverless-logic-with-azure-functions
+PLACEHOLDER,module,Create an Azure Storage account,https://docs.microsoft.com/en-us/learn/modules/create-azure-storage-account
+PLACEHOLDER,learning path,Create serverless applications,https://docs.microsoft.com/en-us/learn/paths/create-serverless-applications
+PLACEHOLDER,module,Core Cloud Services - Azure data storage options,https://docs.microsoft.com/en-us/learn/modules/intro-to-data-in-azure
+PLACEHOLDER,module,Prepare your development environment for Azure development,https://docs.microsoft.com/en-us/learn/modules/prepare-your-dev-environment-for-azure-development
+PLACEHOLDER,module,Core Cloud Services - Manage services with the Azure portal,https://docs.microsoft.com/en-us/learn/modules/tour-azure-portal
+PLACEHOLDER,learning path,Work with relational data in Azure,https://docs.microsoft.com/en-us/learn/paths/work-with-relational-data-in-azure
+PLACEHOLDER,learning path,Administer infrastructure resources in Azure,https://docs.microsoft.com/en-us/learn/paths/administer-infrastructure-resources-in-azure
+PLACEHOLDER,module,Create a Windows virtual machine in Azure,https://docs.microsoft.com/en-us/learn/modules/create-windows-virtual-machine-in-azure
+PLACEHOLDER,module,Align requirements with cloud types and service models in Azure,https://docs.microsoft.com/en-us/learn/modules/align-requirements-in-azure
+PLACEHOLDER,module,Configure the network for your virtual machines,https://docs.microsoft.com/en-us/learn/modules/configure-network-for-azure-virtual-machines
+PLACEHOLDER,module,Design for efficiency and operations in Azure,https://docs.microsoft.com/en-us/learn/modules/design-for-efficiency-and-operations-in-azure
+PLACEHOLDER,module,Design for security in Azure,https://docs.microsoft.com/en-us/learn/modules/design-for-security-in-azure
+PLACEHOLDER,module,Pillars of a great Azure architecture,https://docs.microsoft.com/en-us/learn/modules/pillars-of-a-great-azure-architecture
+PLACEHOLDER,module,Publish a web app to Azure with Visual Studio,https://docs.microsoft.com/en-us/learn/modules/publish-azure-web-app-with-visual-studio
+PLACEHOLDER,module,Store application data with Azure Blob storage,https://docs.microsoft.com/en-us/learn/modules/store-app-data-with-azure-blob-storage
+PLACEHOLDER,module,Create an Azure Cosmos DB database built to scale,https://docs.microsoft.com/en-us/learn/modules/create-cosmos-db-for-scale
+PLACEHOLDER,module,Create a Linux virtual machine in Azure,https://docs.microsoft.com/en-us/learn/modules/create-linux-virtual-machine-in-azure
+PLACEHOLDER,module,Execute an Azure Function with triggers,https://docs.microsoft.com/en-us/learn/modules/execute-azure-function-with-triggers
+PLACEHOLDER,module,Implement message-based communication workflows with Azure Service Bus,https://docs.microsoft.com/en-us/learn/modules/implement-message-workflows-with-service-bus
+PLACEHOLDER,module,Cloud Concepts - Principles of cloud computing,https://docs.microsoft.com/en-us/learn/modules/principles-cloud-computing
+PLACEHOLDER,module,Core Cloud Services - Azure compute options,https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-compute
+PLACEHOLDER,module,Learn how to manage IoT devices as an IT Admin,https://docs.microsoft.com/en-us/learn/modules/manage-iot-devices
+PLACEHOLDER,learning path,Deploy a website with Azure virtual machines,https://docs.microsoft.com/en-us/learn/paths/deploy-a-website-with-azure-virtual-machines
+PLACEHOLDER,learning path,Architect great solutions in Azure,https://docs.microsoft.com/en-us/learn/paths/architect-great-solutions-in-azure
+PLACEHOLDER,module,Automate Azure tasks using scripts with PowerShell,https://docs.microsoft.com/en-us/learn/modules/automate-azure-tasks-with-powershell
+PLACEHOLDER,module,Process images with the Computer Vision service,https://docs.microsoft.com/en-us/learn/modules/create-computer-vision-service-to-classify-images
+PLACEHOLDER,module,Enable reliable messaging for Big Data applications using Azure Event Hubs,https://docs.microsoft.com/en-us/learn/modules/enable-reliable-messaging-for-big-data-apps-using-event-hubs
+PLACEHOLDER,learning path,Deploy a website to Azure with Azure App Service,https://docs.microsoft.com/en-us/learn/paths/deploy-a-website-with-azure-app-service
+PLACEHOLDER,learning path,Manage resources in Azure,https://docs.microsoft.com/en-us/learn/paths/manage-resources-in-azure
+PLACEHOLDER,module,Build a .NET Core app for Azure Cosmos DB in Visual Studio Code,https://docs.microsoft.com/en-us/learn/modules/build-cosmos-db-app-with-vscode
+PLACEHOLDER,module,Add and size disks in Azure virtual machines,https://docs.microsoft.com/en-us/learn/modules/add-and-size-disks-in-azure-virtual-machines
+PLACEHOLDER,module,Secure your Azure virtual machine disks,https://docs.microsoft.com/en-us/learn/modules/secure-your-azure-virtual-machine-disks
+PLACEHOLDER,module,Top 5 security items to consider before pushing to production,https://docs.microsoft.com/en-us/learn/modules/top-5-security-items-to-consider
+PLACEHOLDER,module,Introduction to Azure virtual machines,https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-virtual-machines
+PLACEHOLDER,module,Run Docker containers with Azure Container Instances,https://docs.microsoft.com/en-us/learn/modules/run-docker-with-azure-container-instances
+PLACEHOLDER,learning path,Work with NoSQL data in Azure Cosmos DB,https://docs.microsoft.com/en-us/learn/paths/work-with-nosql-data-in-azure-cosmos-db
+PLACEHOLDER,module,Control Azure services with the CLI,https://docs.microsoft.com/en-us/learn/modules/control-azure-services-with-cli
+PLACEHOLDER,module,Insert and query data in your Azure Cosmos DB database,https://docs.microsoft.com/en-us/learn/modules/access-data-with-cosmos-db-and-sql-api
+PLACEHOLDER,module,Discover sentiment in text with the Text Analytics API,https://docs.microsoft.com/en-us/learn/modules/classify-user-feedback-with-the-text-analytics-api
+PLACEHOLDER,module,Share your location as a text message using Azure Functions and Twilio,https://docs.microsoft.com/en-us/learn/modules/send-location-over-sms-using-azure-functions-twilio
+PLACEHOLDER,module,"Interactive deep learning with Jupyter, Docker and PyTorch on the Data Science Virtual Machine",https://docs.microsoft.com/en-us/learn/modules/interactive-deep-learning
+PLACEHOLDER,module,Manage secrets in your server apps with Azure Key Vault,https://docs.microsoft.com/en-us/learn/modules/manage-secrets-with-azure-key-vault
+PLACEHOLDER,module,Manage virtual machines with the Azure CLI,https://docs.microsoft.com/en-us/learn/modules/manage-virtual-machines-with-azure-cli
+PLACEHOLDER,module,Connect an app to Azure Storage,https://docs.microsoft.com/en-us/learn/modules/connect-an-app-to-azure-storage
+PLACEHOLDER,module,Create an Azure Database for PostgreSQL server,https://docs.microsoft.com/en-us/learn/modules/create-azure-db-for-postgresql-server
+PLACEHOLDER,module,Choose a data storage approach in Azure,https://docs.microsoft.com/en-us/learn/modules/choose-storage-approach-in-azure
+PLACEHOLDER,module,Distribute your data globally with Azure Cosmos DB,https://docs.microsoft.com/en-us/learn/modules/distribute-data-globally-with-cosmos-db
+PLACEHOLDER,module,"Security, responsibility and trust in Azure",https://docs.microsoft.com/en-us/learn/modules/intro-to-security-in-azure
+PLACEHOLDER,module,Build and run a web application with the MEAN stack on an Azure Linux virtual machine,https://docs.microsoft.com/en-us/learn/modules/build-a-web-app-with-mean-on-a-linux-vm
+PLACEHOLDER,module,Build Azure Resource Manager templates,https://docs.microsoft.com/en-us/learn/modules/build-azure-vm-templates
+PLACEHOLDER,module,Optimize your web applications by caching read-only data with Redis,https://docs.microsoft.com/en-us/learn/modules/optimize-your-web-apps-with-redis
+PLACEHOLDER,module,Design for availability and recoverability in Azure,https://docs.microsoft.com/en-us/learn/modules/design-for-availability-and-recoverability-in-azure
+PLACEHOLDER,module,Communicate between applications with Azure Queue storage,https://docs.microsoft.com/en-us/learn/modules/communicate-between-apps-with-azure-queue-storage
+PLACEHOLDER,module,Choose a messaging model in Azure to loosely connect your services,https://docs.microsoft.com/en-us/learn/modules/choose-a-messaging-model-in-azure-to-connect-your-services
+PLACEHOLDER,module,Build and store container images with Azure Container Registry,https://docs.microsoft.com/en-us/learn/modules/build-and-store-container-images
+PLACEHOLDER,module,Core Cloud Services - Azure networking options,https://docs.microsoft.com/en-us/learn/modules/intro-to-azure-networking
+PLACEHOLDER,module,Design for performance and scalability in Azure,https://docs.microsoft.com/en-us/learn/modules/design-for-performance-and-scalability-in-azure
+PLACEHOLDER,module,Work with mutable and partial data in Azure Cache for Redis,https://docs.microsoft.com/en-us/learn/modules/work-with-mutable-and-partial-data-in-a-redis-cache
+PLACEHOLDER,learning path,Connect your services together,https://docs.microsoft.com/en-us/learn/paths/connect-your-services-together
+PLACEHOLDER,module,Analyze climate data with Azure Notebooks,https://docs.microsoft.com/en-us/learn/modules/analyze-climate-data-with-azure-notebooks
+PLACEHOLDER,learning path,Store data in Azure,https://docs.microsoft.com/en-us/learn/paths/store-data-in-azure

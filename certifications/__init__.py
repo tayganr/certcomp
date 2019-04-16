@@ -111,20 +111,3 @@ def getRequirement(cert, level):
         requirement = 'Step 1: ' + skills_reqd + ' Step 2: ' + requirement
     
     return requirement
-
-def transformCertId(link):
-    link = link.replace('.aspx','')
-    link = link.replace('https://www.microsoft.com/en-us/learning/', '')
-    cert_id = ''
-    for part in link.split('-'):
-        cert_id += part.title()
-    return cert_id[0].lower() + cert_id[1:]
-
-def getCertId(url):
-    cert_id = None
-    page = requests.get(url)
-    tree = html.fromstring(page.content)
-    js = tree.xpath('//*[@id="content"]/div/div/script/text()')
-    if len(js):
-        cert_id = js[0].split('"')[1]
-    return cert_id

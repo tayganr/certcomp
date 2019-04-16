@@ -2,6 +2,7 @@ import os
 import logging
 import requests
 import json
+import math
 from datetime import datetime
 import pandas as pd
 from lxml import html
@@ -22,6 +23,9 @@ COLUMNS_PREP = ['EXAM_ID', 'PREP_TYPE', 'PREP_TEXT', 'LINK']
 # Microsoft Exams
 URL = 'https://www.microsoft.com/en-us/learning/exam-list.aspx'
 
+# Microsoft Learn
+LEARN_API = 'https://docs.microsoft.com/api/contentbrowser/search'
+
 def main(req: func.HttpRequest) -> func.HttpResponse:
     # 1. Init
     data_exam = []
@@ -33,13 +37,12 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     tree = html.fromstring(page.content)
 
     # 3. Get Data
-    
     for li in tree.xpath('//*[@id="exam-list-wrap"]/div/ul/li'):
         # EXAM
         exam = li.xpath('./a[@class="mscom-link"]')[0]
         link_text = exam.xpath('./text()')[0]
         exam_id = link_text.split(':')[0]
-        exam_title = link_text.split(':')[1]
+        exam_title = link_text.split(':')[1].split(' (')[0].strip()
         exam_url = exam.attrib['href']
         beta = bool(extract(li.xpath('./strong/text()')))
 
@@ -47,9 +50,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         if 'release' in exam_title:
             published = exam_title.replace('(beta)','')
             published = published.split('(')[1].split(')')[0].replace('releases ','').replace('released ','')
-            exam_title = exam_title.split(' (')[0]
-
-        exam_title = exam_title.strip()
+            published = published.split(', retiring')[0]
 
         logging.info('{0}: {1}'.format(exam_id, exam_title))
         
@@ -91,6 +92,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         response[exam_id]['published'] = published
         response[exam_id]['beta'] = beta
         data_exam.append(exam_row)
+
+    # data_prep = add_ms_learn_entries(data_prep)
 
     # 4. Write to Azure Blob Storage
     block_blob_service = BlockBlobService(account_name=ACCOUNT_NAME, account_key=ACCOUNT_KEY)     
