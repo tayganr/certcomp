@@ -8,6 +8,7 @@ import pandas as pd
 from lxml import html
 from azure.storage.blob import BlockBlobService
 import azure.functions as func
+from .mslearn import *
 
 # Azure Blob Storage
 ACCOUNT_NAME = os.environ.get('CERT_COMP_STORAGE_NAME')
@@ -94,6 +95,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         data_exam.append(exam_row)
 
     # data_prep = add_ms_learn_entries(data_prep)
+    data_prep = append_learn(data_prep)
 
     # 4. Write to Azure Blob Storage
     block_blob_service = BlockBlobService(account_name=ACCOUNT_NAME, account_key=ACCOUNT_KEY)     
