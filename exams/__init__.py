@@ -48,12 +48,12 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         beta = bool(extract(li.xpath('./strong/text()')))
 
         published = None
-        if 'release' in exam_title:
-            published = exam_title.replace('(beta)','')
-            published = published.split('(')[1].split(')')[0].replace('releases ','').replace('released ','')
+        if 'release' in link_text or 'available' in link_text:
+            published = link_text.replace('(beta)','')
+            published = published.split('(')[1].split(')')[0].replace('releases ','').replace('released ','').replace('available ','')
             published = published.split(', retiring')[0]
 
-        logging.info('{0}: {1}'.format(exam_id, exam_title))
+        logging.info('{0}: {1}'.format(exam_id, published))
         
         # DETAIL
         try:
