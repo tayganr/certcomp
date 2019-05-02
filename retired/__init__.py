@@ -33,8 +33,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     tree = html.fromstring(page.content)
 
     # 3. Get Data
-    for section in tree.xpath('//*[@id="content"]/div/div/div/div/div/dl/dd'):
-        retirement_date_raw = section.xpath('.//table/tbody/tr/td[1]/text()')
+    for section in tree.xpath('//*[@id="content"]/div/div/div/div[3]/div/table'):
+        retirement_date_raw = section.xpath('.//tbody/tr/td[1]/text()')
+        logging.info('RETIRE: ' + retirement_date_raw[0])
 
         if retirement_date_raw:
             retirement_date_raw = retirement_date_raw[0].strip()
@@ -50,7 +51,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                     retirement_date_text = '{0} {1} {2}'.format(retirement_day, retirement_month, retirement_year)
                     retirement_date = datetime.strptime(retirement_date_text, '%d %B %Y')
             
-            for exam in section.xpath('.//table/tbody/tr/td[2]/p/a'):
+            for exam in section.xpath('.//tbody/tr/td[2]/p/a'):
                 exam_id = exam.xpath('./text()')[0].strip().replace(':', '')
                 row = [exam_id, retirement_date]
                 response[exam_id] = str(retirement_date)
