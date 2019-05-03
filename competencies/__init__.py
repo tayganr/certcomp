@@ -98,7 +98,15 @@ def populate_table(competency_name, option, level, links, table):
             if prefix in link or link_title.startswith('Exam'):
                 exam_id = get_exam_id(link_title)
                 row = (competency_name, option, level, exam_id)
-                table.append(row) 
+                table.append(row)
+            elif 'https://www.microsoft.com/en-us/learning/' in link:
+                link_response = requests.get(link)
+                link_tree = html.fromstring(link_response.content)
+
+                for exam in link_tree.xpath('//*[@id="msl-certification-azure"]/div[1]/section/div/div/p[1]/a'):
+                    exam_id = exam.xpath('./text()')[0].replace('Exam ','').replace('Transition ','')
+                    row = (competency_name, option, level, exam_id)
+                    table.append(row)
 
     return table
 
