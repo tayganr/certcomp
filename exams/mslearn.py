@@ -1,3 +1,4 @@
+import logging
 import math
 import json
 import requests
@@ -18,52 +19,152 @@ ROLES_DICT = {
     "admin-m365": ['MS-100','MS-101']
 }
 
+MAPPING = [
+    {
+        "$filter": "((roles/any(t: t eq 'ai-engineer'))) and ((products/any(t: t eq 'azure')))",
+        "exams": ["AI-100"]
+    },
+    {
+        "$filter": "((roles/any(t: t eq 'administrator'))) and ((products/any(t: t eq 'azure')))",
+        "exams": ["AZ-102", "AZ-103"]
+    },
+    {
+        "$filter": "((roles/any(t: t eq 'solution-architect'))) and ((products/any(t: t eq 'azure')))",
+        "exams": ["AZ-300","AZ-301","AZ-302"]
+    },
+    {
+        "$filter": "((roles/any(t: t eq 'developer'))) and ((products/any(t: t eq 'azure')))",
+        "exams": ["AZ-203"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'azure')))",
+        "terms": "devops",
+        "exams": ["AZ-403"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'azure')))",
+        "terms": "security",
+        "exams": ["AZ-500"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'azure')))",
+        "terms": "fundamentals",
+        "exams": ["AZ-900"]
+    },
+    {
+        "$filter": "((roles/any(t: t eq 'data-scientist'))) and ((products/any(t: t eq 'azure')))",
+        "exams": ["DP-100"]
+    },
+    {
+        "$filter": "((roles/any(t: t eq 'data-engineer'))) and ((products/any(t: t eq 'azure')))",
+        "exams": ["DP-200","DP-201"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'dynamics-customer-engagement')))",
+        "exams": ["MB-200"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'dynamics-sales')))",
+        "exams": ["MB-210"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'dynamics-marketing')))",
+        "exams": ["MB-220"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'dynamics-customer-service')))",
+        "exams": ["MB-230"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'dynamics-field-service')))",
+        "exams": ["MB-240"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'dynamics')))",
+        "terms": "unified operations",
+        "exams": ["MB-300"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'dynamics-finance-operations')))",
+        "exams": ["MB-310","MB-320","MB-330"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'dynamics')))",
+        "terms": "fundamentals",
+        "exams": ["MB-900"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'm365')))",
+        "terms": "desktop",
+        "exams": ["MD-100","MD-101"]
+    },
+    {
+        "$filter": "((roles/any(t: t eq 'administrator'))) and ((products/any(t: t eq 'm365')))",
+        "exams": ["MS-100","MS-101"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'm365')))",
+        "terms": "messaging",
+        "exams": ["MS-200","MS-201","MS-202"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'm365')))",
+        "terms": "teamwork",
+        "exams": ["MS-300","MS-301","MS-302"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'm365')))",
+        "terms": "security",
+        "exams": ["MS-500"]
+    },
+    {
+        "$filter": "((products/any(t: t eq 'm365')))",
+        "terms": "fundamentals",
+        "exams": ["MS-900"]
+    }
+]
+
 def append_learn(table):
-    # Iterate each MS Learn page
-    total_pages = get_ms_learn_page_count()
-    skip = 0
-    for x in range(0,total_pages):
-        data = get_ms_learn_response(skip)
+    # Iterate through each MS Learn request (MAPPING)
+    for item in MAPPING:
+        filters = item['$filter']
+        terms = None
+        if 'terms' in item:
+            terms = item['terms']
 
-        for result in data['results']:
-            roles = result['roles']
-            title = result['title']
-            resource_type = result['resource_type']
-            products = result['products']
-            url = 'https://docs.microsoft.com/en-us{0}'.format(result['url'])
+        total_pages = get_ms_learn_page_count(filters, terms)
+        skip = 0
+        # Iterate each MS Learn page
+        for x in range(0,total_pages):
+            data = get_ms_learn_response(skip, filters, terms)
+            for result in data['results']:
+                title = result['title']
+                resource_type = result['resource_type']
+                url = 'https://docs.microsoft.com/en-us{0}'.format(result['url'])
 
-            # Append rows where 1:1 mapping between ROLE and EXAM
-            for role in ROLES_DICT:
-                if role in roles:
-                    for exam in ROLES_DICT[role]:
-                        table.append([exam, resource_type, title, url])
-
-            # Administrator role could be M365: Security Administrator (MS-500); Azure: Administrator (AZ-100;AZ-101)
-            if 'administrator' in roles and 'azure' in products:
-                for exam in ROLES_DICT['admin-azure']:
+                for exam in item['exams']:
                     table.append([exam, resource_type, title, url])
-
-            if 'administrator' in roles and 'm365' in products:
-                for exam in ROLES_DICT['admin-m365']:
-                    table.append([exam, resource_type, title, url])
-            
-        skip += 30
+                
+            skip += 30
     return table
 
-def get_ms_learn_page_count():
-    data = get_ms_learn_response(0)
+def get_ms_learn_page_count(filters, terms):
+    data = get_ms_learn_response(0, filters, terms)
     total_count = data['count']
     total_pages = math.ceil(total_count / 30)
     return total_pages
 
-def get_ms_learn_response(skip):
+def get_ms_learn_response(skip, filters, terms):
     payload = {
         'environment': 'prod',
         'locale': 'en-us',
         '$orderBy': 'last_modified desc',
         '$skip': skip,
+        '$filter': filters,
         '$top': 30
     }
+    if terms:
+        payload['terms'] = terms
     response = requests.get(LEARN_API, params=payload)
     data = json.loads(response.content)
     return data
