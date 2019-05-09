@@ -47,6 +47,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         exam_url = exam.attrib['href']
         beta = bool(extract(li.xpath('./strong/text()')))
 
+        # Added logic for beta as not all exams are correctly tagged with the strong text
+        if 'beta' in link_text:
+            beta = True
+
         published = None
         if 'release' in link_text or 'available' in link_text:
             published = link_text.replace('(beta)','')

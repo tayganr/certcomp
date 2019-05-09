@@ -39,7 +39,7 @@ MAPPING = [
     {
         "$filter": "((products/any(t: t eq 'azure')))",
         "terms": "devops",
-        "exams": ["AZ-403"]
+        "exams": ["AZ-400"]
     },
     {
         "$filter": "((products/any(t: t eq 'azure')))",
