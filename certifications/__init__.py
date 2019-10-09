@@ -56,27 +56,29 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                     data_certexams.append(exam_row)
                     response['certifications'][level][cert_title].append(exam_id)
                 
-                logging.info(requirement)
-                
                 cert_row = [cert_id, level, cert_title, cert_url, requirement]
                 data_certs.append(cert_row)
             elif(level != 'MCE'):
-                script_text = cert_tree.xpath('//*[@id="content"]/div/div/script/text()')[0]
-                api_key = script_text.split('fnLoadCertificationPage')[1].split('"')[1]
-                cert_api = 'https://www.microsoft.com/learning/proxy2/LocAPIPROD/api/values/GetContent?localeCode=en-us&property={0}'.format(api_key)
-                cert_response = requests.get(cert_api)
-                cert_data = json.loads(cert_response.content)
-                requirement = getRequirement(cert_data[api_key], level)
+                requirement = None
+                try:
+                    script_text = cert_tree.xpath('//*[@id="content"]/div/div/script/text()')[0]
+                    api_key = script_text.split('fnLoadCertificationPage')[1].split('"')[1]
+                    cert_api = 'https://www.microsoft.com/learning/proxy2/LocAPIPROD/api/values/GetContent?localeCode=en-us&property={0}'.format(api_key)
+                    cert_response = requests.get(cert_api)
+                    cert_data = json.loads(cert_response.content)
+                    requirement = getRequirement(cert_data[api_key], level)
+                    response['certifications'][level][cert_title] = []
+
+                    # Exam - Certification 
+                    for exam in cert_data[api_key]['cert_page_details']['steps']['step2']['exams']:
+                        exam_id = exam['exam_code'].replace('Exam ', '')
+                        exam_row = [cert_id, exam_id]
+                        data_certexams.append(exam_row)
+                        response['certifications'][level][cert_title].append(exam_id)
+                except:
+                    pass
                 cert_row = [cert_id, level, cert_title, cert_url, requirement]
                 data_certs.append(cert_row)
-                response['certifications'][level][cert_title] = []
-
-                # Exam - Certification 
-                for exam in cert_data[api_key]['cert_page_details']['steps']['step2']['exams']:
-                    exam_id = exam['exam_code'].replace('Exam ', '')
-                    exam_row = [cert_id, exam_id]
-                    data_certexams.append(exam_row)
-                    response['certifications'][level][cert_title].append(exam_id)
         
     # 4. Write to Azure Blob Storage
     block_blob_service = BlockBlobService(account_name=ACCOUNT_NAME, account_key=ACCOUNT_KEY)     

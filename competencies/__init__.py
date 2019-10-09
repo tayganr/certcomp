@@ -22,8 +22,10 @@ COLUMNS_COMPEXAMS = ['COMPETENCY','OPTION','LEVEL','EXAM']
 # Microsoft Competencies
 URL = 'https://partner.microsoft.com/en-us/membership/competencies'
 XPATH_COMPETENCY_AREAS = '//div[@class="panel-group hidden-md-x hidden-lg simple-tabs-accordion-sm"]/div'
-XPATH_COMPETENCIES = './div//div[@class="accordion-container"]//div[@class="panel-group"]/div'
+XPATH_COMPETENCIES = './/div[@class="col-xs-12 col-sm-6 col-md-x-4 clickable-panel column-content-item"]'
 # COMPETENCY_URL_PREFIX = 'https://partner.microsoft.com'
+XPATH_COMPETENCY_OPTIONS = '//div[@class="complex-table-accordion-device"]//div[@class="panel panel-default"]'
+XPATH_COMPETENCY_TIERS = './/div[@class="panel-body"]//div[@class="col-md-12"]'
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
@@ -39,13 +41,14 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     # 3a. Get Data - Competencies
     for area in tree.xpath(XPATH_COMPETENCY_AREAS):
-        competency_area = area.xpath('./div/h4/a/span[@class="accordion-heading-text"]/text()')[0]
+        competency_area = area.xpath('.//span[@class="accordion-heading-text"]/text()')[0]
         response['competencies'][competency_area] = []
+        logging.info(competency_area)
 
         for comp in area.xpath(XPATH_COMPETENCIES):
-            competency = comp.xpath('.//span[@class="accordion-heading-text"]/text()')[0]
-            competency_link = comp.xpath('.//a[@class="button cta-x cta-x-primary bg-blue"]')[0].attrib["href"]
-            logging.info(competency_link)
+            competency = comp.xpath('.//h3[@class="subhead2 headline-hoverable"]/text()')[0]
+            logging.info(competency)
+            competency_link = comp.xpath('.//a[@class="cta cta-x cta-x-secondary"]')[0].attrib["href"]
             row = [competency_area, competency, competency_link]
             data_comps.append(row)
             response['competencies'][competency_area].append({"competency":competency,"link":competency_link})
@@ -57,13 +60,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             page_comp = requests.get(competency['link'])
             tree_comp = html.fromstring(page_comp.content)
 
-            for section in tree_comp.xpath('//div[@id="tab-content-2"]/div[@class="complex-table-v2 "]/div[@class="complex-table-accordion-desktop"]/div[@class="accordion-x"]/div/div[@class="panel panel-default"]'):
+            for section in tree_comp.xpath(XPATH_COMPETENCY_OPTIONS):
                 option = section.xpath('.//span[@class="accordion-heading-text"]/text()')[0]
                 logging.info('Option: ' + option)
                
                 toggle = {'Gold':'Silver','Silver':'Gold'}
                 level = 'Gold'
-                for segment in section.xpath('./div[2]/div/div/div[@class="col-md-4"][position()>1]'):
+                for segment in section.xpath(XPATH_COMPETENCY_TIERS):
                     level = toggle[level]
                     logging.info('-- ' + level)
                     for links in segment.xpath('.//a'):
