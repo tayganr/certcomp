@@ -10,5 +10,5 @@
   },
   "azureFunctions.pythonVenv": ".env",
   "debug.internalConsoleOptions": "neverOpen",
-  "python.pythonPath": ".env/bin/python"
+  "python.pythonPath": "/Users/taygan/Documents/Developer/certcomp/env/bin/python3"
 }
