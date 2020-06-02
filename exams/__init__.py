@@ -5,7 +5,6 @@ import json
 import math
 from datetime import datetime
 import pandas as pd
-from lxml import html
 from azure.storage.blob import BlockBlobService
 import azure.functions as func
 from .mslearn import *
@@ -21,11 +20,9 @@ FILE_NAME_PREP = 'preparation'
 COLUMNS_EXAMS = ['EXAM_ID', 'EXAM', 'LINK', 'PUBLISHED', 'BETA']
 COLUMNS_PREP = ['EXAM_ID', 'PREP_TYPE', 'PREP_TEXT', 'LINK']
 
-# Microsoft Exams
-URL = 'https://www.microsoft.com/en-us/learning/exam-list.aspx'
-
-# Microsoft Learn
-LEARN_API = 'https://docs.microsoft.com/api/contentbrowser/search'
+# API
+API = 'https://docs.microsoft.com/api/contentbrowser/search/certifications'
+BATCH = 30
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     # 1. Init
@@ -33,70 +30,29 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     data_prep = []
     response = {}
 
-    # 2. HTTP Request
-    page = requests.get(URL)
-    tree = html.fromstring(page.content)
+    # Calculate number of pages
+    number_of_items = getResponse(0)['count']
+    number_of_pages = math.ceil(number_of_items/BATCH)
+    
+    # Get Exam Data
+    for page in range(0,number_of_pages):
+        skip = page * 30
+        data = getResponse(skip)
+        for result in data['results']:
+            exam_id = result['exam_display_name']
+            exam_title = result['title']
+            exam_url = 'https://docs.microsoft.com/en-us{0}'.format(result['url'])
+            exam_modified = result['last_modified']
+            exam_beta = isbeta(exam_title)
+            exam_row = [exam_id, exam_title, exam_url, exam_modified, exam_beta]
+            data_exam.append(exam_row)
 
-    # 3. Get Data
-    for li in tree.xpath('//*[@id="exam-list-wrap"]/div/ul/li'):
-        # EXAM
-        exam = li.xpath('./a[@class="mscom-link"]')[0]
-        link_text = exam.xpath('./text()')[0]
-        exam_id = link_text.split(':')[0]
-        exam_title = link_text.split(':')[1].split(' (')[0].strip()
-        exam_url = exam.attrib['href']
-        beta = bool(extract(li.xpath('./strong/text()')))
-
-        # Added logic for beta as not all exams are correctly tagged with the strong text
-        if 'beta' in link_text:
-            beta = True
-
-        published = None
-        if 'release' in link_text or 'available' in link_text:
-            published = link_text.replace('(beta)','')
-            published = published.split('(')[1].split(')')[0].replace('releases ','').replace('released ','').replace('available ','')
-            published = published.split(', retiring')[0]
-
-        logging.info('{0}: {1}'.format(exam_id, published))
-        
-        # DETAIL
-        try:
-            detail = requests.get(exam_url, timeout=5)
-            detail_tree = html.fromstring(detail.content)
-
-            if published is None:
-                published = extract(detail_tree.xpath('//*[@id="msl2ExamHero-details"]/ul/li[1]/text()'))
-
-            # PREP ATTRIBUTES
-            for prep in detail_tree.xpath('//div[@id="preparation-options"]/dl/dd'):
-                prep_type = prep.attrib['id']
-
-                # (community, elearning, onlinetraining, practice-test, selflearning, studyguide, training)
-                for item in prep.xpath('./ul/li/a'):
-                    prep_href = get_link(item)
-                    prep_text = extract(item.xpath('./text()'))
-                    prep_row = [exam_id, prep_type, prep_text, prep_href]
-                    data_prep.append(prep_row)
-
-                # (books)
-                if prep_type == 'books':
-                    for book_div in prep.xpath('./div'):
-                        prep_text = extract(book_div.xpath('./div/p/strong[1]/text()'))
-                        for book in book_div.xpath('./div/p/a'):
-                            prep_href = get_link(book)
-                            prep_row = [exam_id, prep_type, prep_text, prep_href]
-                            data_prep.append(prep_row)
-        except requests.exceptions.Timeout:
-            logging.exception("Timeout occurred")
-
-        # ROW - EXAM
-        exam_row = [exam_id, exam_title, exam_url, published, beta]
-        response[exam_id] = {}
-        response[exam_id]['title'] = exam_title
-        response[exam_id]['url'] = exam_url
-        response[exam_id]['published'] = published
-        response[exam_id]['beta'] = beta
-        data_exam.append(exam_row)
+            # JSON Response
+            response[exam_id] = {}
+            response[exam_id]['title'] = exam_title
+            response[exam_id]['url'] = exam_url
+            response[exam_id]['published'] = exam_modified
+            response[exam_id]['beta'] = exam_beta
 
     # data_prep = add_ms_learn_entries(data_prep)
     data_prep = append_learn(data_prep)
@@ -117,14 +73,27 @@ def write_to_blob(block_blob_service, data, columns, filename):
     csv = df.to_csv(index=False, encoding='utf-8')
     block_blob_service.create_blob_from_text(container_name=CONTAINER_NAME, blob_name=filename, text=csv, encoding='utf-8')
 
-def extract(data):
-    if data:
-        return data[0].strip()
-    else:
-        return None
+def getResponse(skip):
+    params = {
+        'environment':'prod',
+        'locale':'en-us',
+        'facet':'levels',
+        'facet':'products',
+        'facet':'resource_type',
+        'facet':'roles',
+        'facet':'type',
+        '$filter':"((resource_type eq 'examination'))",
+        '$orderBy':"last_modified desc",
+        '$skip':skip,
+        '%$top':BATCH
+    }
+    response = requests.get(API, params=params)
+    data = json.loads(response.content)
+    return data
 
-def get_link(href):
-    if href is not None:
-        return href.attrib['href']
+def isbeta(title):
+    title_suffix = title[-5:][:4]
+    if title_suffix == 'beta':
+        return True
     else:
-        return None
+        return False
