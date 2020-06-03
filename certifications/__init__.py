@@ -2,9 +2,9 @@ import os
 import logging
 import requests
 import json
+import math
 from datetime import datetime
 import pandas as pd
-from lxml import html
 from azure.storage.blob import BlockBlobService
 import azure.functions as func
 
@@ -19,8 +19,9 @@ FILE_NAME_CERTEXAMS = 'cert_exams'
 COLUMNS_CERTS = ['CERT_ID', 'LEVEL', 'CERTIFICATION', 'LINK', 'REQUIREMENTS']
 COLUMNS_CERTEXAMS = ['CERT_ID', 'EXAM_ID']
 
-# Microsoft Certifications
-URL_CERTS = 'https://www.microsoft.com/learning/proxy2/LocAPIPROD/api/values/GetContent?localeCode=en-us&property=mslCertifications'
+# API
+API = 'https://docs.microsoft.com/api/contentbrowser/search/certifications'
+BATCH = 30
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
@@ -28,58 +29,40 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     data_certs = []
     data_certexams = []
     response = {}
-    response['certifications'] = {}
+    response = {}
 
-    # CERTIFICATIONS ##################################################
-    http_response = requests.get(URL_CERTS)
-    http_data = json.loads(http_response.content)
+    # Calculate number of pages
+    number_of_items = getResponse(0)['count']
+    number_of_pages = math.ceil(number_of_items/BATCH)
 
-    for level in http_data['mslCertifications']:
-        response['certifications'][level] = {}
-        for cert in http_data['mslCertifications'][level]:
-            # Certification Name and URL
-            cert_id = cert['ID']
-            cert_title = cert['name']
-            cert_url = 'https://www.microsoft.com/en-us/learning/{0}'.format(cert['url'])
-            logging.info(cert_title)
+    # Get Exam Data
+    for page in range(0,number_of_pages):
+        skip = page * 30
+        data = getResponse(skip)
+        for result in data['results']:
+            cert_id = result['uid']
+            cert_type = result['type']
+            cert_title = result['title']
+            cert_url = 'https://docs.microsoft.com/en-us{0}'.format(result['url'])
 
-            cert_response = requests.get(cert_url)
-            cert_tree = html.fromstring(cert_response.content)
+            # JSON Response
+            response[cert_id] = {}
+            response[cert_id]['title'] = cert_title
+            response[cert_id]['type'] = cert_type
+            response[cert_id]['url'] = cert_url
+            response[cert_id]['exams'] = []
+
+            cert_req = 'Exam '
+            for exam in result['exams']:
+                exam_id = exam['display_name']
+                cert_req += '{0};'.format(exam_id)
+                exam_row = [cert_id, exam_id]
+                data_certexams.append(exam_row)
+                response[cert_id]['exams'].append(exam_id)
             
-            if(level == 'Role-based'):
-                requirement = 'Required Exams:'
-                response['certifications'][level][cert_title] = []
-                for exam in cert_tree.xpath('//*[@id="msl-certification-azure"]/div[1]/section/div/div/p[1]/a'):
-                    exam_id = exam.xpath('./text()')[0].replace('Exam ','').replace('Transition ','').strip()
-                    requirement += ' {0};'.format(exam_id)
-                    exam_row = [cert_id, exam_id]
-                    data_certexams.append(exam_row)
-                    response['certifications'][level][cert_title].append(exam_id)
-                
-                cert_row = [cert_id, level, cert_title, cert_url, requirement]
-                data_certs.append(cert_row)
-            elif(level != 'MCE'):
-                requirement = None
-                try:
-                    script_text = cert_tree.xpath('//*[@id="content"]/div/div/script/text()')[0]
-                    api_key = script_text.split('fnLoadCertificationPage')[1].split('"')[1]
-                    cert_api = 'https://www.microsoft.com/learning/proxy2/LocAPIPROD/api/values/GetContent?localeCode=en-us&property={0}'.format(api_key)
-                    cert_response = requests.get(cert_api)
-                    cert_data = json.loads(cert_response.content)
-                    requirement = getRequirement(cert_data[api_key], level)
-                    response['certifications'][level][cert_title] = []
-
-                    # Exam - Certification 
-                    for exam in cert_data[api_key]['cert_page_details']['steps']['step2']['exams']:
-                        exam_id = exam['exam_code'].replace('Exam ', '')
-                        exam_row = [cert_id, exam_id]
-                        data_certexams.append(exam_row)
-                        response['certifications'][level][cert_title].append(exam_id)
-                except:
-                    pass
-                cert_row = [cert_id, level, cert_title, cert_url, requirement]
-                data_certs.append(cert_row)
-        
+            cert_row = [cert_id, cert_type, cert_title, cert_url, cert_req]
+            data_certs.append(cert_row)
+    
     # 4. Write to Azure Blob Storage
     block_blob_service = BlockBlobService(account_name=ACCOUNT_NAME, account_key=ACCOUNT_KEY)     
     write_to_blob(block_blob_service, data_certs, COLUMNS_CERTS, FILE_NAME_CERTS)
@@ -96,20 +79,20 @@ def write_to_blob(block_blob_service, data, columns, filename):
     csv = df.to_csv(index=False, encoding='utf-8')
     block_blob_service.create_blob_from_text(container_name=CONTAINER_NAME, blob_name=filename, text=csv, encoding='utf-8')
 
-def getRequirement(cert, level):
-    step_tagline = cert['cert_page_details']['steps']['step2']['step_tagline'].replace(' Be sure to explore the exam prep resources.', '')
-    whats_involved = cert['cert_page_details']['what_is_involved']['step2_exams'].replace(' Be sure to explore the exam prep resources.', '')
-
-    skills_reqd = None
-    if level == 'MCSD' or level == 'MCSE':
-        skills_reqd = cert['cert_page_details']['what_is_involved']['step1_skills']
-
-    if '70-' in step_tagline:
-        requirement = step_tagline
-    else:
-        requirement = whats_involved
-
-    if skills_reqd:
-        requirement = 'Step 1: ' + skills_reqd + ' Step 2: ' + requirement
-    
-    return requirement
+def getResponse(skip):
+    params = {
+        'environment':'prod',
+        'locale':'en-us',
+        'facet':'levels',
+        'facet':'products',
+        'facet':'resource_type',
+        'facet':'roles',
+        'facet':'type',
+        '$filter':"((resource_type eq 'certification'))",
+        '$orderBy':"last_modified desc",
+        '$skip':skip,
+        '%$top':BATCH
+    }
+    response = requests.get(API, params=params)
+    data = json.loads(response.content)
+    return data
