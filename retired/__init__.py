@@ -18,7 +18,7 @@ FILE_NAME = 'retired'
 COLUMNS = ['EXAM_ID', 'RETIREMENT_DATE']
 
 # Microsoft Retired Exams
-URL = 'https://www.microsoft.com/en-us/learning/retired-certification-exams.aspx'
+URL = 'https://docs.microsoft.com/en-us/learn/certifications/retired-certification-exams'
 MONTHS = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE',
     'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
 
@@ -33,42 +33,34 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     tree = html.fromstring(page.content)
 
     # 3. Exams Scheduled to Retire
-    for section in tree.xpath('//*[@id="content"]/div/div/div/div[3]/div/table'):
-        retirement_date_raw = section.xpath('.//tbody/tr/td[1]/text()')
-        # logging.info('RETIRE: ' + retirement_date_raw[0])
+    for table in tree.xpath('//main[@id="main"]/table'):
+        th = table.xpath('.//th/text()')[0]
+        retirement_date = get_retirement_date(th)
 
-        if retirement_date_raw:
-            retirement_date_raw = retirement_date_raw[0].strip()
-            retirement_date_raw = retirement_date_raw.replace('Retiring on ', '')
-            retirement_date = get_retirement_date(retirement_date_raw)
-            
-            for exam in section.xpath('.//tbody/tr/td[2]/p/a'):
-                exam_id = exam.xpath('./text()')[0].strip().replace(':', '')
+        # A. Where [retirement_date] exists in table header
+        if retirement_date != None:
+            for a in table.xpath('.//tbody/tr/td/a'):
+                exam_id = a.xpath('./text()')[0]
                 row = [exam_id, retirement_date]
                 response[exam_id] = str(retirement_date)
                 data.append(row)
-    
-    # Exams Recently Retired (othercert-1)
-    for trow in tree.xpath('//*[@id="othercert-1"]/table/tbody/tr'):
-        cells = trow.xpath('.//td')
-        exam_id = cells[0].xpath('.//text()')[0]
-        retire_date = cells[2].xpath('.//text()')[0]
-        retire_date = get_retirement_date(retire_date)
-        row = [exam_id, retire_date]
-        response[exam_id] = str(retire_date)
-        data.append(row)
 
-    # Exams Recently Retired (othercert-2)
-    for trow in tree.xpath('//*[@id="othercert-2"]/table/tbody/tr'):
-        cells = trow.xpath('.//td')
-        exam_id = cells[0].xpath('.//text()')[0]
-        retire_date = cells[2].xpath('.//text()')[0]
-        retire_date = get_retirement_date(retire_date)
-        row = [exam_id, retire_date]
-        response[exam_id] = str(retire_date)
-        data.append(row)
+        # B. Where [retirement_date] does not exist in table header
+        else:
+            for tr in table.xpath('.//tbody/tr'):
+                exam_id = tr.xpath('./td[1]')[0].text_content()
+                retirement_date = tr.xpath('./td[3]/text()')[0]
+                date_parts = retirement_date.split(' ')
+                if len(date_parts) == 1:
+                    retirement_date = 'January 1, ' + retirement_date
+                elif len(date_parts) == 2:
+                    retirement_date = date_parts[0] + ' 1, ' + date_parts[1]
+                retirement_date = get_retirement_date(retirement_date)
+                row = [exam_id, retirement_date]
+                response[exam_id] = str(retirement_date)
+                data.append(row)
       
-    # 4. Write to Azure Blob Storage
+    # # 4. Write to Azure Blob Storage
     block_blob_service = BlockBlobService(account_name=ACCOUNT_NAME, account_key=ACCOUNT_KEY)     
     write_to_blob(block_blob_service, data, COLUMNS, FILE_NAME)
 
@@ -81,7 +73,7 @@ def get_retirement_date(retirement_date_raw):
         if month in retirement_date_raw.upper():
             retirement_month = month
             retirement_year = retirement_date_raw[-4:]
-            retirement_day = retirement_date_raw.upper().replace(retirement_month, '').replace(retirement_year, '').replace(',', '').replace(' ', '')
+            retirement_day = retirement_date_raw.upper().replace(retirement_month, '').replace(retirement_year, '').replace(',', '').replace(' ', '').replace('RETIRINGON','')
             retirement_date_text = '{0} {1} {2}'.format(retirement_day, retirement_month, retirement_year)
             retirement_date = datetime.strptime(retirement_date_text, '%d %B %Y')
     return retirement_date
